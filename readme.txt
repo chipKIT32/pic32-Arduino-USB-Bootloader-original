@@ -1,8 +1,11 @@
 This project builds a simple Stk500v2 bootloader that is compatible with
 avrdude and MPIDE (used on the chipKIT boards) for any PIC32 MX4, 5, 6, or 7
-MCU.  The MCU exposes a CDC/ACM serial port function out the USB, and you
-can configure avrdude or MPIDE to talk to it.  You install the bootloader
-on your MCU using a Pickit3 or equivalent.
+MCU.  The bootloader lives wholly in bootflash, leaving all primary flash
+(0x9d000000 and higher) for use by applications.
+
+When running the bootloader, the MCU exposes a CDC/ACM serial port function
+out the USB, and you can configure avrdude or MPIDE to talk to it.  You
+install the bootloader on your MCU using a Pickit3 or equivalent.
 
 You need to install the cpustick.inf file to talk to the CDC/ACM port on
 Windows (using the Microsoft driver usbser.sys -- the inf file just binds
@@ -30,9 +33,10 @@ ISSUES
    "find . -type f | xargs grep -i c:\\\\" will show you where.
 
 2. If you don't have a license for the optimizer (-Os), the bits won't fit
-   by default in kseg0 bootflash.  You can edit the linker file to use 3.9k
-   more space by giving up some debug functionality that is rarely used with
-   bootloaders.  Just change boot-linkerscript.ld and grow this line:
+   by default in the first 8k of kseg0 bootflash.  You can edit the linker
+   file to use 3.9k more space (still wholly within the 12k bootflash) by
+   giving up some debug functionality that is rarely used with bootloaders.
+   Just change boot-linkerscript.ld and grow this line:
 
      kseg0_boot_mem       (rx)  : ORIGIN = 0x9FC00490, LENGTH = 0x1B70
 
