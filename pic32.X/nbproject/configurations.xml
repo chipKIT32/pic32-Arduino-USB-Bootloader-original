@@ -67,9 +67,8 @@
         </linkerTool>
       </compileType>
       <C32>
-        <property key="extra-include-directories"
-                  value="..;../pict-o-crypt;../cpustick;../headers;../sources;../stickos"/>
         <property key="additional-warnings" value="false"/>
+        <property key="extra-include-directories" value="..;../cpustick;../sources"/>
         <property key="preprocessor-macros" value="PIC32=1;STICKOS=1"/>
         <property key="exclude-floating-point" value="true"/>
         <property key="make-warnings-into-errors" value="false"/>
@@ -94,8 +93,8 @@
         <property key="list-file" value=""/>
         <property key="list-source" value="false"/>
         <property key="list-assembly" value="false"/>
-        <property key="extra-include-directories-for-preprocessor" value=""/>
         <property key="warning-level" value=""/>
+        <property key="extra-include-directories-for-preprocessor" value=""/>
         <property key="list-section-info" value="false"/>
         <property key="omit-forms" value="false"/>
         <property key="list-symbols" value="false"/>
@@ -112,7 +111,7 @@
         <property key="warn-section-align" value="false"/>
         <property key="heap-size" value="0"/>
         <property key="no-startup-files" value="false"/>
-        <property key="remove-unused-sections" value="false"/>
+        <property key="remove-unused-sections" value="true"/>
         <property key="stack-size" value="3072"/>
         <property key="linker-symbols" value=""/>
         <property key="trace-symbols" value=""/>
@@ -150,9 +149,8 @@
         </linkerTool>
       </compileType>
       <C32>
-        <property key="extra-include-directories"
-                  value="..;../pict-o-crypt;../cpustick;../headers;../sources;../stickos"/>
         <property key="additional-warnings" value="false"/>
+        <property key="extra-include-directories" value="..;../cpustick;../sources"/>
         <property key="preprocessor-macros" value="PIC32=1;STICKOS=1"/>
         <property key="exclude-floating-point" value="true"/>
         <property key="make-warnings-into-errors" value="false"/>
@@ -177,8 +175,8 @@
         <property key="list-file" value=""/>
         <property key="list-source" value="false"/>
         <property key="list-assembly" value="false"/>
-        <property key="extra-include-directories-for-preprocessor" value=""/>
         <property key="warning-level" value=""/>
+        <property key="extra-include-directories-for-preprocessor" value=""/>
         <property key="list-section-info" value="false"/>
         <property key="omit-forms" value="false"/>
         <property key="list-symbols" value="false"/>
@@ -195,7 +193,7 @@
         <property key="warn-section-align" value="false"/>
         <property key="heap-size" value="0"/>
         <property key="no-startup-files" value="false"/>
-        <property key="remove-unused-sections" value="false"/>
+        <property key="remove-unused-sections" value="true"/>
         <property key="stack-size" value="3072"/>
         <property key="linker-symbols" value=""/>
         <property key="trace-symbols" value=""/>
@@ -233,9 +231,8 @@
         </linkerTool>
       </compileType>
       <C32>
-        <property key="extra-include-directories"
-                  value="..;../pict-o-crypt;../cpustick;../headers;../sources;../stickos"/>
         <property key="additional-warnings" value="false"/>
+        <property key="extra-include-directories" value="..;../cpustick;../sources"/>
         <property key="preprocessor-macros" value="PIC32=1;STICKOS=1"/>
         <property key="exclude-floating-point" value="true"/>
         <property key="make-warnings-into-errors" value="false"/>
@@ -260,8 +257,8 @@
         <property key="list-file" value=""/>
         <property key="list-source" value="false"/>
         <property key="list-assembly" value="false"/>
-        <property key="extra-include-directories-for-preprocessor" value=""/>
         <property key="warning-level" value=""/>
+        <property key="extra-include-directories-for-preprocessor" value=""/>
         <property key="list-section-info" value="false"/>
         <property key="omit-forms" value="false"/>
         <property key="list-symbols" value="false"/>
@@ -278,7 +275,7 @@
         <property key="warn-section-align" value="false"/>
         <property key="heap-size" value="0"/>
         <property key="no-startup-files" value="false"/>
-        <property key="remove-unused-sections" value="false"/>
+        <property key="remove-unused-sections" value="true"/>
         <property key="stack-size" value="3072"/>
         <property key="linker-symbols" value=""/>
         <property key="trace-symbols" value=""/>
@@ -316,9 +313,8 @@
         </linkerTool>
       </compileType>
       <C32>
-        <property key="extra-include-directories"
-                  value="..;../pict-o-crypt;../cpustick;../headers;../sources;../stickos"/>
         <property key="additional-warnings" value="false"/>
+        <property key="extra-include-directories" value="..;../cpustick;../sources"/>
         <property key="preprocessor-macros" value="PIC32=1;STICKOS=1"/>
         <property key="exclude-floating-point" value="true"/>
         <property key="make-warnings-into-errors" value="false"/>
@@ -343,8 +339,8 @@
         <property key="list-file" value=""/>
         <property key="list-source" value="false"/>
         <property key="list-assembly" value="false"/>
-        <property key="extra-include-directories-for-preprocessor" value=""/>
         <property key="warning-level" value=""/>
+        <property key="extra-include-directories-for-preprocessor" value=""/>
         <property key="list-section-info" value="false"/>
         <property key="omit-forms" value="false"/>
         <property key="list-symbols" value="false"/>
@@ -361,7 +357,7 @@
         <property key="warn-section-align" value="false"/>
         <property key="heap-size" value="0"/>
         <property key="no-startup-files" value="false"/>
-        <property key="remove-unused-sections" value="false"/>
+        <property key="remove-unused-sections" value="true"/>
         <property key="stack-size" value="3072"/>
         <property key="linker-symbols" value=""/>
         <property key="trace-symbols" value=""/>
