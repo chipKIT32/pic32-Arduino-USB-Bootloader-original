@@ -6,7 +6,7 @@
 
 # Macros
 TOP=`pwd`
-CND_CONF=UBW32v1
+CND_CONF=CUI32_MX440
 CND_DISTDIR=dist
 TMPDIR=build/${CND_CONF}/${IMAGE_TYPE}/tmp-packaging
 TMPDIRNAME=tmp-packaging

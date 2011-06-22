@@ -15,7 +15,7 @@ MKDIR=mkdir -p
 RM=rm -f 
 CP=cp 
 # Macros
-CND_CONF=CUI32
+CND_CONF=UBW32_MX795
 
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 IMAGE_TYPE=debug
@@ -63,9 +63,9 @@ MP_AR_DIR=C:\\Program\ Files\\Microchip\\MPLAB\ C32\ Suite\\bin
 ifneq ($(OS_CURRENT),$(OS_ORIGINAL))
 	@echo "***** WARNING: This make file contains OS dependent code. The OS this makefile is being run is different from the OS it was created in."
 endif
-	${MAKE}  -f nbproject/Makefile-CUI32.mk dist/${CND_CONF}/${IMAGE_TYPE}/pic32.X.${IMAGE_TYPE}.elf
+	${MAKE}  -f nbproject/Makefile-UBW32_MX795.mk dist/${CND_CONF}/${IMAGE_TYPE}/pic32.X.${IMAGE_TYPE}.elf
 
-MP_PROCESSOR_OPTION=32MX440F512H
+MP_PROCESSOR_OPTION=32MX795F512L
 MP_LINKER_FILE_OPTION=,--script=../boot-linkerscript.ld
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
@@ -218,8 +218,8 @@ endif
 
 # Clean Targets
 .clean-conf:
-	${RM} -r build/CUI32
-	${RM} -r dist/CUI32
+	${RM} -r build/UBW32_MX795
+	${RM} -r dist/UBW32_MX795
 
 # Enable dependency checking
 .dep.inc: .depcheck-impl

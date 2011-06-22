@@ -21,7 +21,7 @@
         </environment>
       </runprofile>
     </conf>
-    <conf name="UBW32v1" type="2">
+    <conf name="UBW32_MX460" type="2">
       <platformToolSN>:=MPLABCommUSB:=04D8:=00E0:=0000:=Microchip Technology Inc.:=PIC32MX Starter Kit  (C) 2007:=JIT084791434:=x:=en</platformToolSN>
       <languageToolchainDir>C:\Program Files\Microchip\MPLAB C32 Suite\bin</languageToolchainDir>
       <mdbdebugger version="1">
@@ -39,7 +39,7 @@
         </environment>
       </runprofile>
     </conf>
-    <conf name="UBW32v2" type="2">
+    <conf name="UBW32_MX795" type="2">
       <platformToolSN>:=MPLABCommUSB:=04D8:=00E0:=0000:=Microchip Technology Inc.:=PIC32MX Starter Kit  (C) 2007:=JIT084791434:=x:=en</platformToolSN>
       <languageToolchainDir>C:\Program Files\Microchip\MPLAB C32 Suite\bin</languageToolchainDir>
       <mdbdebugger version="1">
@@ -57,7 +57,7 @@
         </environment>
       </runprofile>
     </conf>
-    <conf name="CUI32" type="2">
+    <conf name="CUI32_MX440" type="2">
       <platformToolSN>:=MPLABCommUSB:=04D8:=00E0:=0000:=Microchip Technology Inc.:=PIC32MX Starter Kit  (C) 2007:=JIT084791434:=x:=en</platformToolSN>
       <languageToolchainDir>C:\Program Files\Microchip\MPLAB C32 Suite\bin</languageToolchainDir>
       <mdbdebugger version="1">

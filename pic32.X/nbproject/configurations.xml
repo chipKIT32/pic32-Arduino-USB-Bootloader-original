@@ -74,8 +74,8 @@
         <property key="make-warnings-into-errors" value="false"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="use-indirect-calls" value="false"/>
-        <property key="support-ansi" value="false"/>
         <property key="strict-ansi" value="false"/>
+        <property key="support-ansi" value="false"/>
         <property key="optimization-level" value="-Os"/>
         <property key="place-data-into-section" value="false"/>
         <property key="post-instruction-scheduling" value="default"/>
@@ -93,8 +93,8 @@
         <property key="list-file" value=""/>
         <property key="list-source" value="false"/>
         <property key="list-assembly" value="false"/>
-        <property key="extra-include-directories-for-preprocessor" value=""/>
         <property key="warning-level" value=""/>
+        <property key="extra-include-directories-for-preprocessor" value=""/>
         <property key="list-section-info" value="false"/>
         <property key="omit-forms" value="false"/>
         <property key="list-symbols" value="false"/>
@@ -132,7 +132,7 @@
         <property key="whatToProgram" value="all"/>
       </SKDEPIC32PlatformTool>
     </conf>
-    <conf name="UBW32v1" type="2">
+    <conf name="UBW32_MX460" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC32MX460F512L</targetDevice>
@@ -156,8 +156,8 @@
         <property key="make-warnings-into-errors" value="false"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="use-indirect-calls" value="false"/>
-        <property key="support-ansi" value="false"/>
         <property key="strict-ansi" value="false"/>
+        <property key="support-ansi" value="false"/>
         <property key="optimization-level" value="-Os"/>
         <property key="place-data-into-section" value="false"/>
         <property key="post-instruction-scheduling" value="default"/>
@@ -175,8 +175,8 @@
         <property key="list-file" value=""/>
         <property key="list-source" value="false"/>
         <property key="list-assembly" value="false"/>
-        <property key="extra-include-directories-for-preprocessor" value=""/>
         <property key="warning-level" value=""/>
+        <property key="extra-include-directories-for-preprocessor" value=""/>
         <property key="list-section-info" value="false"/>
         <property key="omit-forms" value="false"/>
         <property key="list-symbols" value="false"/>
@@ -214,7 +214,7 @@
         <property key="whatToProgram" value="all"/>
       </SKDEPIC32PlatformTool>
     </conf>
-    <conf name="UBW32v2" type="2">
+    <conf name="UBW32_MX795" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC32MX795F512L</targetDevice>
@@ -238,8 +238,8 @@
         <property key="make-warnings-into-errors" value="false"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="use-indirect-calls" value="false"/>
-        <property key="support-ansi" value="false"/>
         <property key="strict-ansi" value="false"/>
+        <property key="support-ansi" value="false"/>
         <property key="optimization-level" value="-Os"/>
         <property key="place-data-into-section" value="false"/>
         <property key="post-instruction-scheduling" value="default"/>
@@ -257,8 +257,8 @@
         <property key="list-file" value=""/>
         <property key="list-source" value="false"/>
         <property key="list-assembly" value="false"/>
-        <property key="extra-include-directories-for-preprocessor" value=""/>
         <property key="warning-level" value=""/>
+        <property key="extra-include-directories-for-preprocessor" value=""/>
         <property key="list-section-info" value="false"/>
         <property key="omit-forms" value="false"/>
         <property key="list-symbols" value="false"/>
@@ -296,7 +296,7 @@
         <property key="whatToProgram" value="all"/>
       </SKDEPIC32PlatformTool>
     </conf>
-    <conf name="CUI32" type="2">
+    <conf name="CUI32_MX440" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC32MX440F512H</targetDevice>
@@ -320,8 +320,8 @@
         <property key="make-warnings-into-errors" value="false"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="use-indirect-calls" value="false"/>
-        <property key="support-ansi" value="false"/>
         <property key="strict-ansi" value="false"/>
+        <property key="support-ansi" value="false"/>
         <property key="optimization-level" value="-Os"/>
         <property key="place-data-into-section" value="false"/>
         <property key="post-instruction-scheduling" value="default"/>
@@ -339,8 +339,8 @@
         <property key="list-file" value=""/>
         <property key="list-source" value="false"/>
         <property key="list-assembly" value="false"/>
-        <property key="extra-include-directories-for-preprocessor" value=""/>
         <property key="warning-level" value=""/>
+        <property key="extra-include-directories-for-preprocessor" value=""/>
         <property key="list-section-info" value="false"/>
         <property key="omit-forms" value="false"/>
         <property key="list-symbols" value="false"/>
