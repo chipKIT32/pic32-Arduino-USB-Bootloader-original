@@ -36,7 +36,6 @@ _ebase_address  = 0x0;
 _RESET_ADDR              = 0xBFC00000;
 _BEV_EXCPT_ADDR          = 0xBFC00380;
 _DBG_EXCPT_ADDR          = 0xBFC00480;
-_DBG_CODE_ADDR           = 0xBFC02000;
 _GEN_EXCPT_ADDR          = _ebase_address + 0x180;
 
 /*************************************************************************
@@ -52,10 +51,9 @@ MEMORY
   //kseg0_boot_mem       (rx)  : ORIGIN = 0x9FC00490, LENGTH = 0x970
   //exception_mem              : ORIGIN = 0x9FC01180, LENGTH = 0x90
   //kseg0_boot_memB      (rx)  : ORIGIN = 0x9FC01210, LENGTH = 0xDF0
-  kseg0_boot_mem       (rx)  : ORIGIN = 0x9FC00490, LENGTH = 0x1B70
+  kseg0_boot_mem       (rx)  : ORIGIN = 0x9FC00490, LENGTH = 0x2B00
   exception_mem              : ORIGIN = 0x9FC00000, LENGTH = 0x0
   kseg1_boot_mem             : ORIGIN = 0xBFC00000, LENGTH = 0x490
-  debug_exec_mem             : ORIGIN = 0xBFC02000, LENGTH = 0xFF0
   config3                    : ORIGIN = 0xBFC02FF0, LENGTH = 0x4
   config2                    : ORIGIN = 0xBFC02FF4, LENGTH = 0x4
   config1                    : ORIGIN = 0xBFC02FF8, LENGTH = 0x4
@@ -101,10 +99,6 @@ SECTIONS
   {
     . += (DEFINED (_DEBUGGER) ? 0x8 : 0x0);
   } > kseg1_boot_mem
-  .dbg_code _DBG_CODE_ADDR (NOLOAD) :
-  {
-    . += (DEFINED (_DEBUGGER) ? 0xFF0 : 0x0);
-  } > debug_exec_mem
   
   /DISCARD/ :
   {
