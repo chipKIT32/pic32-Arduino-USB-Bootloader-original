@@ -53,5 +53,5 @@ ISSUES
        } > debug_exec_mem
 
 // These files originated from the cpustick.com skeleton project from
-// http://www.cpustick.com/downloads.htm and was originally written
+// http://www.cpustick.com/downloads.htm and were originally written
 // by Rich Testardi; please preserve this reference.
