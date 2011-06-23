@@ -152,6 +152,7 @@ cdcacm_print(const byte *buffer, int length)
     }
 
     while (rx_in != rx_out) {
+        // XXX -- replace with a delay for interrupt use
         usb_isr();
     }
     
