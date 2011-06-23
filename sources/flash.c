@@ -1,5 +1,10 @@
-// *** flash.c ********************************************************
+// *** flash.c *****************************************************************
+//
 // this file implements the low level flash control and access.
+//
+// This file originated from the cpustick.com skeleton project from
+// http://www.cpustick.com/downloads.htm and was originally written
+// by Rich Testardi; please preserve this reference.
 
 #include "main.h"
 

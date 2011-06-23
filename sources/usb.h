@@ -1,4 +1,4 @@
-// *** usb ******************************************************************
+// *** usb.h *******************************************************************
 
 #define SETUP_SIZE  8
 
@@ -34,8 +34,8 @@ struct setup {
 
 extern volatile bool usb_in_isr;  // set when in isr
 
-extern bool ftdi_attached;  // set when ftdi host is attached
-extern uint32 ftdi_attached_count;
+extern bool cdcacm_attached;  // set when cdcacm host is attached
+extern uint32 cdcacm_attached_count;
 
 extern byte bulk_in_ep;
 extern byte bulk_out_ep;

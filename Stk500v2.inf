@@ -9,13 +9,13 @@ DriverVer=10/15/2009,1.0.0.0
 %ProviderName%=DeviceList, NTx86, NTamd64
 
 [DeviceList.NTx86]
-%CPUStick%=DriverInstall,USB\VID_0403&PID_A660
+%Stk500v2%=DriverInstall,USB\VID_0403&PID_A662
 
 [DeviceList.NTamd64]
-%CPUStick%=DriverInstall,USB\VID_0403&PID_A660
+%Stk500v2%=DriverInstall,USB\VID_0403&PID_A662
 
 [DefaultInstall]
-CopyInf=cpustick.inf
+CopyInf=Stk500v2.inf
 
 [DriverInstall]
 include=mdmcpq.inf
@@ -32,4 +32,4 @@ HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
 
 [Strings]
 ProviderName = "www.cpustick.com"
-CPUStick = "CPUStick"
+Stk500v2 = "Stk500v2"

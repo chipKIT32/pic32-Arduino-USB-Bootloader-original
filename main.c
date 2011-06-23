@@ -1,7 +1,12 @@
-// *** main.c *********************************************************
-// this is the main program that is launched by startup.c; it just
+// *** main.c ******************************************************************
+//
+// this is the main program that is launched by crt0.S; it just
 // initializes all of the modules of the os and then runs the main
 // application program loop.
+//
+// This file originated from the cpustick.com skeleton project from
+// http://www.cpustick.com/downloads.htm and was originally written
+// by Rich Testardi; please preserve this reference.
 
 #include "main.h"
 
@@ -72,10 +77,10 @@ main()  // we're called directly by startup.c
     usb_initialize();
 
     // initialize the application
-    cpustick_initialize();
+    avrbl_initialize();
 
     // run the main application program loop
-    cpustick_run();
+    avrbl_run();
 
     ASSERT(0);  // stop!
     return 0;

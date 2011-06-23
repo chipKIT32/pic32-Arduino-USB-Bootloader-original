@@ -1,7 +1,8 @@
-// *** main.h *********************************************************
+// *** main.h ******************************************************************
 
 #ifndef MAIN_INCLUDED
 
+// enable SODEBUG to enable assert()s; ASSERT()s are always enabled
 //#define SODEBUG  1
 #define DEBUGGING  1
 
@@ -53,11 +54,11 @@ extern uint32 bus_frequency;
 #include <stdarg.h>
 
 #include "flash.h"
-#include "ftdi.h"
+#include "cdcacm.h"
 #include "usb.h"
 #include "util.h"
 
-#include "cpustick.h"
+#include "avrbl.h"
 
 #if SODEBUG
 #define assert(x)  do { if (! (x)) { asm_halt(); } } while (0)

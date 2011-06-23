@@ -7,10 +7,10 @@ When running the bootloader, the MCU exposes a CDC/ACM serial port function
 out the USB, and you can configure avrdude or MPIDE to talk to it.  You
 install the bootloader on your MCU using a Pickit3 or equivalent.
 
-You need to install the cpustick.inf file to talk to the CDC/ACM port on
+You need to install the Stk500v2.inf file to talk to the CDC/ACM port on
 Windows (using the Microsoft driver usbser.sys -- the inf file just binds
-a human-readable name "CPUStick" to the VID/PID used by the CDC/ACM port).
-Just right-click on cpustick.inf and select Install.
+a human-readable name "Stk500v2" to the VID/PID used by the CDC/ACM port).
+Just right-click on Stk500v2.inf and select Install.
 
 You can then use MPIDE to talk to the CDC/ACM port -- reset the board before
 uploading your sketch (you have 10 seconds to get to the upload or else the
@@ -52,3 +52,6 @@ ISSUES
          . += (DEFINED (_DEBUGGER) ? 0xFF0 : 0x0);
        } > debug_exec_mem
 
+// These files originated from the cpustick.com skeleton project from
+// http://www.cpustick.com/downloads.htm and was originally written
+// by Rich Testardi; please preserve this reference.

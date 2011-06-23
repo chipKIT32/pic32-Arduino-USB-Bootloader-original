@@ -1,10 +1,14 @@
-// *** usb.c **********************************************************
-// this file implements a generic usb device driver; the FTDI transport
-// sits on top of this module to implement a specific usb device.
+// *** usb.c *******************************************************************
+//
+// this file implements a generic usb device driver; the CDC/ACM transport
+// sits on top of this module to implement a specific usb device function.
+//
+// This file originated from the cpustick.com skeleton project from
+// http://www.cpustick.com/downloads.htm and was originally written
+// by Rich Testardi; please preserve this reference.
 
 #include "main.h"
 
-#if PIC32
 // REVISIT -- move to relocated compat.h
 #define MCF_USB_OTG_CTL  U1CON
 #define MCF_USB_OTG_CTL_USB_EN_SOF_EN  _U1CON_SOFEN_MASK
@@ -56,11 +60,6 @@
 #define PA_TO_KVA0(pa)  ((pa) | 0x80000000)  // cachable
 #define PA_TO_KVA1(pa)  ((pa) | 0xa0000000)
 */
-#else
-#define KVA_TO_PA(v)  (v)
-#define PA_TO_KVA0(pa)  (pa)  // cachable
-#define PA_TO_KVA1(pa)  (pa)
-#endif
 
 #define HWRETRIES  1
 #define SWRETRIES  3
@@ -93,12 +92,7 @@
 
 #define MYBDT(endpoint, tx, odd)  (bdts+(endpoint)*4+(tx)*2+(odd))
 
-#if PIC32
 #define BDT_RAM_SIZE  256
-#else
-extern uint32 __BDT_RAM[], __BDT_RAM_END[];
-#define BDT_RAM_SIZE  ((int)__BDT_RAM_END - (int)__BDT_RAM)
-#endif
 
 static struct bdt {
     int flags;
@@ -134,8 +128,8 @@ bool scsi_attached;  // set when usb mass storage device is attached
 uint32 scsi_attached_count;
 bool other_attached;  // set when other device is attached
 
-bool ftdi_attached;  // set when ftdi host is attached
-uint32 ftdi_attached_count;
+bool cdcacm_attached;  // set when cdcacm host is attached
+uint32 cdcacm_attached_count;
 
 static
 void
@@ -195,12 +189,7 @@ usb_device_wait()
     MCF_USB_OTG_CTL = MCF_USB_OTG_CTL_USB_EN_SOF_EN;
 
     // enable usb pull ups
-#if ! MCF51JM128
     MCF_USB_OTG_OTG_CTRL = MCF_USB_OTG_OTG_CTRL_DP_HIGH|MCF_USB_OTG_OTG_CTRL_OTG_EN;
-#else
-    USB_OTG_CONTROL |= USB_OTG_CONTROL_DPPULLUP_NONOTG_MASK;
-    USBTRC0 |= USBTRC0_USBPU_MASK;
-#endif
 
     // enable (only) usb reset interrupt
     MCF_USB_OTG_INT_STAT = 0xff;
@@ -267,7 +256,6 @@ usb_device_enqueue(int endpoint, bool tx, byte *buffer, int length)
     ep = MCF_USB_OTG_ENDPT_EP_HSHK|MCF_USB_OTG_ENDPT_EP_TX_EN|MCF_USB_OTG_ENDPT_EP_RX_EN;
     ep |= endpoint?MCF_USB_OTG_ENDPT_EP_CTL_DIS:0;
     // enable the packet transfer
-#if PIC32
     switch (endpoint) {
         case 0:
             U1EP0 = (uint8)(ep);
@@ -285,9 +273,6 @@ usb_device_enqueue(int endpoint, bool tx, byte *buffer, int length)
             ASSERT(0);
             break;
     }
-#else
-    MCF_USB_OTG_ENDPT(endpoint) = (uint8)(ep);
-#endif
 }
 
 static byte setup_buffer[SETUP_SIZE];  // from host
@@ -311,11 +296,7 @@ usb_isr(void)
     assert(! usb_in_isr);
     assert((usb_in_isr = true) ? true : true);
     
-#if PIC32
     //IFS1CLR = 0x02000000; // USBIF
-#else
-     (void)splx(7);
-#endif
     
     // *** device ***
     
@@ -434,8 +415,8 @@ usb_isr(void)
                         next_address = value;
                     } else if (setup->request == REQUEST_SET_CONFIGURATION) {
                         assert(value == 1);
-                        ftdi_attached_count++;
-                        ftdi_attached = 1;
+                        cdcacm_attached_count++;
+                        cdcacm_attached = 1;
                     } else if (setup->request == REQUEST_GET_CONFIGURATION) {
                         endpoints[endpoint].data_pid = TOKEN_IN;
 
@@ -568,8 +549,8 @@ XXX_SKIP2_XXX:;
 
     // if we just got reset by the host...
     if (MCF_USB_OTG_INT_STAT & MCF_USB_OTG_INT_STAT_USB_RST) {
-        ftdi_active = 0;
-        ftdi_attached = 0;
+        cdcacm_active = 0;
+        cdcacm_attached = 0;
 
         usb_device_default();
 
@@ -588,8 +569,8 @@ XXX_SKIP2_XXX:;
 
     // if we just went idle...
     if (MCF_USB_OTG_INT_STAT & MCF_USB_OTG_INT_STAT_SLEEP) {
-        ftdi_active = 0;
-        ftdi_attached = 0;
+        cdcacm_active = 0;
+        cdcacm_attached = 0;
 
         // disable usb sleep interrupts
         MCF_USB_OTG_INT_ENB &= ~MCF_USB_OTG_INT_ENB_SLEEP_EN;
@@ -641,29 +622,12 @@ usb_string_descriptor(const byte *descriptor, int length)
 void
 usb_initialize(void)
 {
-#if PIC32
     static __attribute__ ((aligned(512))) byte bdt_ram[BDT_RAM_SIZE];
 
     bdts = (struct bdt *)bdt_ram;
-#else
-    bdts = (struct bdt *)__BDT_RAM;
-#endif
 
     assert(BDT_RAM_SIZE >= LENGTHOF(endpoints)*4*sizeof(struct bdt));
 
-#if MCF52221 || MCF52259
-    // enable usb interrupt
-    MCF_INTC0_ICR53 = MCF_INTC_ICR_IL(SPL_USB)|MCF_INTC_ICR_IP(SPL_USB);
-    MCF_INTC0_IMRL &= ~MCF_INTC_IMRL_MASKALL;
-    MCF_INTC0_IMRH &= ~MCF_INTC_IMRH_INT_MASK53;  // usb
-#elif MCF51JM128
-    /* Reset USB module first. */
-    USBTRC0_USBRESET = 1;
-    while (USBTRC0_USBRESET ) {
-        // NULL
-    }
-    USBTRC0 |= USBTRC0_USBVREN_MASK;
-#elif PIC32
     // power on
     U1PWRCbits.USBPWR = 1;
 
@@ -673,17 +637,7 @@ usb_initialize(void)
     //IPC11bits.USBIS = 0;
     //INTEnable(INT_USB, 1);
     //INTSetPriority(INT_USB, 6);
-#endif
 
-#if MCF52221 || MCF52259 || MCF51JM128
-    // initialize usb timing
-    if (oscillator_frequency == 48000000) {
-        MCF_USB_OTG_USB_CTRL = MCF_USB_OTG_USB_CTRL_CLK_SRC(1);
-    } else {
-        assert(cpu_frequency == 48000000);
-        MCF_USB_OTG_USB_CTRL = MCF_USB_OTG_USB_CTRL_CLK_SRC(3);
-    }
-#endif
     MCF_USB_OTG_SOF_THLD = 74;
 
     // initialize usb bdt

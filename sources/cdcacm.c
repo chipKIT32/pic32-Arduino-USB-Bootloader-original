@@ -1,7 +1,10 @@
-// *** ftdi.c *********************************************************
-// N.B. as of v1.80, this file implements a CDC/ACM transport (on top
-// of the usb driver module); prior to v1.80, this file implemented an
-// FTDI transport (on top of the usb driver module).
+// *** cdcacm.c ****************************************************************
+//
+// this file implements a CDC/ACM transport on top of the usb driver module.
+//
+// This file originated from the cpustick.com skeleton project from
+// http://www.cpustick.com/downloads.htm and was originally written
+// by Rich Testardi; please preserve this reference.
 
 #include "main.h"
 
@@ -9,26 +12,27 @@
 
 // We have allocated 8 PIDs to you from A660 to A667 (hex).
 // The PIDs must be used with VID 0403.
-// We use A660; Cale Fallgatter uses A661; Jim Donelson uses A667.
-#define FTDI_VID  0x0403
-#define FTDI_PID  0xA660
-#define FTDI_RID  0x0180
+// We use A660; Cale Fallgatter uses A661; Jim Donelson uses A667;
+// Avrbootloader group (this project) uses A662.
+#define CDCACM_VID  0x0403
+#define CDCACM_PID  0xA662
+#define CDCACM_RID  0x0180
 
-static const byte ftdi_device_descriptor[] = {
+static const byte cdcacm_device_descriptor[] = {
     18,  // length
     0x01,  // device descriptor
     0x01, 0x01,  // 1.1
     0x02, 0x00, 0x00,  // class (cdc), subclass, protocol
     PACKET_SIZE,  // packet size
-    FTDI_VID%0x100, FTDI_VID/0x100, FTDI_PID%0x100, FTDI_PID/0x100,
-    FTDI_RID%0x100, FTDI_RID/0x100,
+    CDCACM_VID%0x100, CDCACM_VID/0x100, CDCACM_PID%0x100, CDCACM_PID/0x100,
+    CDCACM_RID%0x100, CDCACM_RID/0x100,
     0x01,  // manufacturer (string)
     0x02,  // product (string)
     0x00,  // sn (string)
     0x01  // num configurations
 };
 
-static const byte ftdi_configuration_descriptor[] = {
+static const byte cdcacm_configuration_descriptor[] = {
     9,  // length
     0x02,  // configuration descriptor
     67, 0,  // total length
@@ -102,7 +106,7 @@ static const byte ftdi_configuration_descriptor[] = {
     0x00,  // interval (ms)
 };
 
-static const byte ftdi_string_descriptor[] = {
+static const byte cdcacm_string_descriptor[] = {
     4,  // length
     0x03, // string descriptor
     0x09, 0x04,  // english (usa)
@@ -113,12 +117,12 @@ static const byte ftdi_string_descriptor[] = {
 
     18,  // length
     0x03,  // string descriptor
-    'C', 0, 'P', 0, 'U', 0, 'S', 0, 't', 0, 'i', 0, 'c', 0, 'k', 0,
+    'S', 0, 't', 0, 'k', 0, '5', 0, '0', 0, '0', 0, 'v', 0, '2', 0,
 };
 
-bool ftdi_active;
+bool cdcacm_active;
 
-static ftdi_reset_cbfn reset_cbfn;
+static cdcacm_reset_cbfn reset_cbfn;
 
 static byte tx[PACKET_SIZE];  // packet from host
 
@@ -135,15 +139,15 @@ static bool discard;  // true when we don't think anyone is listening
 
 
 // this function waits for space to be available in the transport
-// buffers and then prints the specified line to the FTDI transport
+// buffers and then prints the specified line to the CDCACM transport
 // console.
 void
-ftdi_print(const byte *buffer, int length)
+cdcacm_print(const byte *buffer, int length)
 {
     int m;
     static uint32 attached_count;
     
-    if (! ftdi_attached || discard) {
+    if (! cdcacm_attached || discard) {
         return;
     }
 
@@ -201,9 +205,9 @@ static uint8 line_coding[7] = {
   FILL_LINE_CODING(115200, 0, 0, 8) /* Default is 115200 BPS and 8N1 format. */
 };
 
-// this function implements the FTDI usb setup control transfer.
+// this function implements the CDCACM usb setup control transfer.
 static int
-ftdi_control_transfer(struct setup *setup, byte *buffer, int length)
+cdcacm_control_transfer(struct setup *setup, byte *buffer, int length)
 {
 #if SODEBUG
     if ((setup->requesttype & 0x60) != (SETUP_TYPE_CLASS<<5)) {
@@ -256,10 +260,10 @@ ftdi_control_transfer(struct setup *setup, byte *buffer, int length)
 
 static bool waiting;
 
-// this function acknowledges receipt of an FTDI command from upper
+// this function acknowledges receipt of an CDCACM command from upper
 // level code.
 void
-ftdi_command_ack(void)
+cdcacm_command_ack(void)
 {
     if (waiting) {
         // start the tx ball rolling
@@ -268,17 +272,17 @@ ftdi_command_ack(void)
     }
 }
 
-// this function implements the FTDI usb bulk transfer.
+// this function implements the CDCACM usb bulk transfer.
 static int
-ftdi_bulk_transfer(bool in, byte *buffer, int length)
+cdcacm_bulk_transfer(bool in, byte *buffer, int length)
 {
     if (! in) {
         discard = false;
     
-        ftdi_active = true;
+        cdcacm_active = true;
         
         // accumulate commands
-        if (cpustick_receive(buffer, length)) {
+        if (avrbl_receive(buffer, length)) {
             // keep the tx ball rolling
             usb_device_enqueue(bulk_out_ep, 0, tx, sizeof(tx));
         } else {
@@ -310,7 +314,7 @@ ftdi_bulk_transfer(bool in, byte *buffer, int length)
 // this function is called by the usb driver when the USB device
 // is reset.
 static void
-ftdi_reset(void)
+cdcacm_reset(void)
 {
     int i;
 
@@ -348,7 +352,7 @@ check(const byte *descriptor, int length)
 // this function is called by upper level code to register callback
 // functions.
 void
-ftdi_register(ftdi_reset_cbfn reset)
+cdcacm_register(cdcacm_reset_cbfn reset)
 {
     int i;
 
@@ -358,20 +362,20 @@ ftdi_register(ftdi_reset_cbfn reset)
 
     reset_cbfn = reset;
 
-    usb_register(ftdi_reset, ftdi_control_transfer, ftdi_bulk_transfer);
+    usb_register(cdcacm_reset, cdcacm_control_transfer, cdcacm_bulk_transfer);
 
-    assert(check(ftdi_device_descriptor, sizeof(ftdi_device_descriptor)) == 1);
-    usb_device_descriptor(ftdi_device_descriptor, sizeof(ftdi_device_descriptor));
+    assert(check(cdcacm_device_descriptor, sizeof(cdcacm_device_descriptor)) == 1);
+    usb_device_descriptor(cdcacm_device_descriptor, sizeof(cdcacm_device_descriptor));
 
-    assert(check(ftdi_configuration_descriptor, sizeof(ftdi_configuration_descriptor)) == 10);
-    usb_configuration_descriptor(ftdi_configuration_descriptor, sizeof(ftdi_configuration_descriptor));
+    assert(check(cdcacm_configuration_descriptor, sizeof(cdcacm_configuration_descriptor)) == 10);
+    usb_configuration_descriptor(cdcacm_configuration_descriptor, sizeof(cdcacm_configuration_descriptor));
 
-    assert(check(ftdi_string_descriptor, sizeof(ftdi_string_descriptor)) == 3);
-    usb_string_descriptor(ftdi_string_descriptor, sizeof(ftdi_string_descriptor));
+    assert(check(cdcacm_string_descriptor, sizeof(cdcacm_string_descriptor)) == 3);
+    usb_string_descriptor(cdcacm_string_descriptor, sizeof(cdcacm_string_descriptor));
 }
 
 /*
-From: FTDI Support 
+From: CDCACM Support
 To: 'Rich Testardi at Home' 
 Sent: Monday, March 24, 2008 4:46 AM
 Subject: RE: Custom PID?
@@ -389,7 +393,7 @@ To reprogram the EEPROM use MPROG.
 The help appendix of this utility will show you how to edit the driver for
 your new identity.
 
-http://www.ftdichip.com/Resources/Utilities/MProg3.0_Setup.exe
+http://www.cdcacmchip.com/Resources/Utilities/MProg3.0_Setup.exe
 
 NOTE 1: Editing the driver for your new identity will invalidate any current
 driver certification.
@@ -402,7 +406,7 @@ Regards,
 Gordon Lunn
 Support Engineer
 
-FTDI Ltd
+CDCACM Ltd
 373 Scotland Street
 Glasgow
 Scotland
@@ -411,8 +415,8 @@ G5 8QB
 
 Tel:     +44 (0) 141 429 2777
 Fax:    +44 (0) 141 429 2758
-Skype: ftdi.support2
-Web:   www.ftdichip.com
+Skype: cdcacm.support2
+Web:   www.cdcacmchip.com
 
 -----Original Message-----
 From: Rich Testardi at Home [mailto:rich@testardi.com] 
@@ -425,7 +429,7 @@ Hi,
 I was wondering if I could get a custom PID to use with your VID?
 (I just need one, not a block of 8, if that matters...  I just want
 to be able to control the version of the driver for my hardware
-independent of the version of the driver for two other FTDI chips
+independent of the version of the driver for two other CDCACM chips
 I already have connected to my development PC!)
 
 Name: Rich Testardi

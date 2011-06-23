@@ -1,6 +1,11 @@
-// *** cpustick.c *****************************************************
-// this file implements the main program loop of stickos, where we
-// wait for and then process (elsewhere) stickos commands.
+// *** avrbl.c *****************************************************************
+//
+// this file implements the main program loop of the PIC32 USB CDC/ACM
+// avrdude bootloader that lives entirely in bootflash
+//
+// This file originated from the cpustick.com skeleton project from
+// http://www.cpustick.com/downloads.htm and was originally written
+// by Rich Testardi; please preserve this reference.
 
 #include "main.h"
 
@@ -8,7 +13,21 @@
 #define LEDTRIS  TRISEbits.TRISE0  // RE0
 #define LEDLAT  LATEbits.LATE0  // RE0
 #define LED_BLINK_LOOPS  100000  // about 4Hz
-#define USER_APP_LOOPS  8000000  // about 10 seconds
+
+// if PRGSWITCH is #defined, we'll use the PRG switch below to control
+// bootloader vs application entry on boot; otherwise, we use a 10 second
+// timer.
+#if PRGSWITCH
+// our PRG switch
+#define PRGTRIS  TRISEbits.TRISE7  // RE7
+#define PRGPORT  PORTEbits.RE7  // RE7
+
+#define AVRBL_LOOPS  0  // forever
+#else
+#define AVRBL_LOOPS  8000000  // about 10 seconds
+#endif
+
+#define AVRBL_DELAY  400000  // about 0.5 seconds
 
 // the stk500v2 state machine states
 // see: http://www.atmel.com/dyn/resources/prod_documents/doc2591.pdf
@@ -39,7 +58,8 @@ enum {
 #define SIGNATURE_BYTES 0x504943
 
 // indicates stk500v2 protocol is active
-static volatile bool active;
+static volatile bool active;  // bootloader is active
+static volatile uint loaded;  // bootloader has loaded
 static volatile uint loops;
 
 // indicates flash has been erased
@@ -52,18 +72,18 @@ static int size;
 static byte csum;
 
 // stk500v2 request message
-static bool ready;  // request has been received
+static bool ready;  // request has been received and is ready to process
 static int requesti;  // number of request bytes
 static byte request[1024];  // request buffer
 #define REQUEST_OFFSET  2  // shift request buffer so flash data at byte offset 10 is 32-bit aligned
 
 // stk500v2 reply message
-static int replyi;
-static byte reply[1024];
+static int replyi;  // number of reply bytes
+static byte reply[1024];  // reply buffer
 
 // this function handles the stk500v2 message protocol state machine
 void
-cpustick_state_machine(byte b)
+avrbl_state_machine(byte b)
 {
     csum ^= b;
 
@@ -115,15 +135,15 @@ cpustick_state_machine(byte b)
 }
 
 // this function receives bytes from the CDC/ACM port
-// N.B. if this routine returns false, ftdi will drop the ball and we'll
-// call ftdi_command_ack() later to pick it up again.
+// N.B. if this routine returns false, cdcacm will drop the ball and we'll
+// call cdcacm_command_ack() later to pick it up again.
 bool
-cpustick_receive(const byte *buffer, int length)
+avrbl_receive(const byte *buffer, int length)
 {
     int i;
 
     for (i = 0; i < length; i++) {
-        cpustick_state_machine(buffer[i]);
+        avrbl_state_machine(buffer[i]);
     }
 
     return true;
@@ -141,16 +161,16 @@ jump_to_app(void)
 
 // this function sends bytes to the CDC/ACM port
 void
-cpustick_print(const byte *buffer, int length)
+avrbl_print(const byte *buffer, int length)
 {
-    if (ftdi_attached && ftdi_active) {
-        ftdi_print(buffer, length);
+    if (cdcacm_attached && cdcacm_active) {
+        cdcacm_print(buffer, length);
     }
 }
 
 // this function handle an stk500v2 message
 void
-cpustick_message(byte *request, int size)
+avrbl_message(byte *request, int size)
 {
     uint i;
     uint nbytes;
@@ -162,9 +182,11 @@ cpustick_message(byte *request, int size)
 
     assert(! replyi);
 
+    // our reply message always starts with the message and status bytes
     reply[replyi++] = *request;
     reply[replyi++] = STATUS_CMD_OK;
 
+    // process the request message and generate additional reply message bytes
     switch (*request) {
         case CMD_SIGN_ON:
             active = true;
@@ -242,6 +264,7 @@ cpustick_message(byte *request, int size)
             load_address += nbytes;
             break;
         case CMD_LEAVE_PROGMODE_ISP:
+            loaded = loops;
             break;
         default:
             ASSERT(0);
@@ -259,31 +282,35 @@ cpustick_message(byte *request, int size)
     for (i = 0; i < rawi; i++) {
         csum ^= raw[i];
     }
-    cpustick_print(raw, rawi);
+    avrbl_print(raw, rawi);
 
-    // send the reply data
+    // send the reply message bytes
     for (i = 0; i < replyi; i++) {
         csum ^= reply[i];
     }
-    cpustick_print(reply, replyi);
+    avrbl_print(reply, replyi);
 
     // send the reply checksum
-    cpustick_print(&csum, 1);
+    avrbl_print(&csum, 1);
 
     replyi = 0;
-
-    // if we just finished programming...
-    if (*request == CMD_LEAVE_PROGMODE_ISP) {
-        // launch the application from the main program loop after a small delay
-        loops = USER_APP_LOOPS*8/10;
-        active = false;
-    }
 }
 
-// this function implements the main program loop.
+// this function implements the main avrdude bootloader program loop.
 void
-cpustick_run(void)
+avrbl_run(void)
 {    
+#if PRGSWITCH
+    // configure the PRG switch
+    PRGTRIS = 1;
+
+    // if the PRG switch is not pressed...
+    if (PRGPORT) {
+        // launch the application!
+        jump_to_app();
+    }
+#endif
+
     // configure the heartbeat LED
     LEDTRIS = 0;
 
@@ -296,8 +323,16 @@ cpustick_run(void)
         // blink the heartbeat LED
         LEDLAT = (loops/LED_BLINK_LOOPS)%2;
 
+#if ! PRGSWITCH
         // if we've been here too long without stk500v2 becoming active...
-        if (loops >= USER_APP_LOOPS && ! active) {
+        if (loops >= AVRBL_LOOPS && ! active) {
+            // launch the application!
+            jump_to_app();
+        }
+#endif
+
+        // if we've loaded the application and had a small delay...
+        if (loaded && loops >= loaded+AVRBL_DELAY) {
             // launch the application!
             jump_to_app();
         }
@@ -308,7 +343,7 @@ cpustick_run(void)
         // if we've received an stk500v2 request...
         if (ready) {
             // process it
-            cpustick_message(request+REQUEST_OFFSET, requesti);
+            avrbl_message(request+REQUEST_OFFSET, requesti);
             ready = false;
         }
     }
@@ -317,14 +352,14 @@ cpustick_run(void)
 // this function is called by the CDC/ACM transport when the USB device
 // is reset.
 static void
-cpustick_reset_cbfn(void)
+avrbl_reset_cbfn(void)
 {
 }
 
 // this function is called by upper level code to register callback
 // functions.
 void
-cpustick_initialize(void)
+avrbl_initialize(void)
 {
-    ftdi_register(cpustick_reset_cbfn);
+    cdcacm_register(avrbl_reset_cbfn);
 }
