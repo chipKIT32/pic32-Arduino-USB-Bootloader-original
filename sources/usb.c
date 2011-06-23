@@ -284,6 +284,8 @@ static byte descriptor[DEVICE_DESCRIPTOR_SIZE];
 static byte configuration[CONFIGURATION_DESCRIPTOR_SIZE];
 
 // called by usb on device attach
+// XXX -- uncomment for interrupt use
+//__ISR(45, ipl6) // REVISIT -- ipl?
 void
 usb_isr(void)
 {
@@ -296,6 +298,7 @@ usb_isr(void)
     assert(! usb_in_isr);
     assert((usb_in_isr = true) ? true : true);
     
+    // XXX -- uncomment for interrupt use
     //IFS1CLR = 0x02000000; // USBIF
     
     // *** device ***
@@ -632,11 +635,10 @@ usb_initialize(void)
     U1PWRCbits.USBPWR = 1;
 
     // enable int
+    // XXX -- uncomment for interrupt use
     //IEC1bits.USBIE = 1;
     //IPC11bits.USBIP = 6;
     //IPC11bits.USBIS = 0;
-    //INTEnable(INT_USB, 1);
-    //INTSetPriority(INT_USB, 6);
 
     MCF_USB_OTG_SOF_THLD = 74;
 
