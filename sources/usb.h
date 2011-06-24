@@ -70,5 +70,8 @@ void
 usb_isr(void);
 
 void
+usb_uninitialize(void);
+
+void
 usb_initialize(void);
 

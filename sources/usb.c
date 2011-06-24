@@ -623,6 +623,14 @@ usb_string_descriptor(const byte *descriptor, int length)
 }
 
 void
+usb_uninitialize(void)
+{
+    // disable usb device mode and usb device pull ups
+    MCF_USB_OTG_CTL = 0;
+    MCF_USB_OTG_OTG_CTRL = 0;
+}
+
+void
 usb_initialize(void)
 {
     static __attribute__ ((aligned(512))) byte bdt_ram[BDT_RAM_SIZE];

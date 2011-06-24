@@ -155,6 +155,12 @@ void
 jump_to_app(void)
 {
     if (*(uint *)USER_APP_ADDR != -1) {
+#if PRGSWITCH
+        // disconnect the USB device from the bus
+        usb_uninitialize();
+#endif
+
+        // jump to the user application
         ((void(*)(void))USER_APP_ADDR)();
     }
 }
