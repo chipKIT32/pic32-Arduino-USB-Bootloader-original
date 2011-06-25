@@ -38,33 +38,6 @@ http://www.cpustick.com/downloads.htm
 
 -- Rich Testardi (rich@testardi.com)
 
-ISSUES
-======
-
-1. If you unpack this MPLAB X project to Mac or Linux, the Windows paths in
-   the Makefiles will obviously be wrong -- you have to edit them by hand.
-   "find . -type f | xargs grep -i c:\\\\" will show you where.
-
-2. If you don't have a license for the optimizer (-Os), the bits won't fit
-   by default in the first 8k of kseg0 bootflash.  You can edit the linker
-   file to use 3.9k more space (still wholly within the 12k bootflash) by
-   giving up some debug functionality that is rarely used with bootloaders.
-   Just change boot-linkerscript.ld and grow this line:
-
-     kseg0_boot_mem       (rx)  : ORIGIN = 0x9FC00490, LENGTH = 0x1B70
-
-   You can easily grow it to 0x2B00 (not 0x2B70, or you'll wipe config bits!)
-   by removing these lines:
-
-     _DBG_CODE_ADDR           = 0xBFC02000;
-     ...
-       debug_exec_mem             : ORIGIN = 0xBFC02000, LENGTH = 0xFF0
-     ...
-       .dbg_code _DBG_CODE_ADDR (NOLOAD) :
-       {
-         . += (DEFINED (_DEBUGGER) ? 0xFF0 : 0x0);
-       } > debug_exec_mem
-
 // These files originated from the cpustick.com skeleton project from
 // http://www.cpustick.com/downloads.htm and were originally written
 // by Rich Testardi; please preserve this reference and share bug
