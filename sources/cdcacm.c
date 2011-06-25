@@ -144,26 +144,41 @@ static bool discard;  // true when we don't think anyone is listening
 void
 cdcacm_print(const byte *buffer, int length)
 {
+    int a;
+    int n;
     int m;
-    static uint32 attached_count;
-    
+
+    ASSERT(length);
+
     if (! cdcacm_attached || discard) {
         return;
     }
 
-    while (rx_in != rx_out) {
+    // figure out how many buffers we need
+    n = (length+sizeof(rx[0])-1)/sizeof(rx[0])+1;
+
+    // forever...
+    m = 0;
+    for (;;) {
+        // compute the number of available buffers
+        a = (rx_out+NRX-rx_in)%NRX;
+        if (! a) {
+            a = NRX;
+        }
+
+        // if we have as many as we need...
+        if (a >= n) {
+            // we're ready to go
+            break;
+        }
+
         // XXX -- replace with a delay for interrupt use
         usb_isr();
     }
-    
-    if (! length) {
-        return;
-    }
-    
-    ASSERT(rx_in == rx_out);
 
-    // append to next rx_in(s)
+    // while there is more data to send...
     do {
+        // append to next rx_in(s)
         m = MIN(length, sizeof(rx[rx_in])-rx_length[rx_in]);
 
         assert(rx_length[rx_in]+m <= sizeof(rx[rx_in]));
@@ -173,19 +188,23 @@ cdcacm_print(const byte *buffer, int length)
         buffer += m;
         length -= m;
 
-        if (length) {
-            assert(rx_length[rx_in] == sizeof(rx[rx_in]));
+        // if this is the first buffer of the transfer or if the transfer will need more buffers...
+        if (a == NRX || length) {
+            // advance to the next buffer
+            assert(length ? rx_length[rx_in] == sizeof(rx[rx_in]) : true);
+            rx_in = (rx_in+1)%NRX;
+            assert(rx_in != rx_out);
+            assert(! rx_length[rx_in]);
         }
-        
-        rx_in = (rx_in+1)%NRX;
-        assert(rx_in != rx_out);
-        assert(! rx_length[rx_in]);
     } while (length);
 
-    // start the rx ball rolling
-    assert(rx_out != rx_in);
-    assert(rx_length[rx_out] > 0 && rx_length[rx_out] < PACKET_SIZE);
-    usb_device_enqueue(bulk_in_ep, 1, rx[rx_out], rx_length[rx_out]);
+    // if this is the first buffer of the transfer...
+    if (a == NRX) {
+        // start the rx ball rolling
+        assert(rx_out != rx_in);
+        assert(rx_length[rx_out] > 0 && rx_length[rx_out] < PACKET_SIZE);
+        usb_device_enqueue(bulk_in_ep, 1, rx[rx_out], rx_length[rx_out]);
+    }
 }
 
 
