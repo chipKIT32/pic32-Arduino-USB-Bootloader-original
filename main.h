@@ -14,12 +14,12 @@
 
 #if ! INTERRUPT
 #define FLASH_START  0x9D000000
-#define FLASH_BYTES  BMXPFMSZ
+#define FLASH_BYTES  (BMXPFMSZ-4096)
 #define FLASH_PAGE_SIZE  4096
 #else
 // N.B. these numbers are bogus and just for testing INTERRUPT mode
 #define FLASH_START  0x9D010000
-#define FLASH_BYTES  (BMXPFMSZ-0x10000)
+#define FLASH_BYTES  (BMXPFMSZ-0x10000-4096)
 #define FLASH_PAGE_SIZE  4096
 #endif
 
