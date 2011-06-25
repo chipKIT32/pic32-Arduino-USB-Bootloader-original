@@ -6,17 +6,22 @@
 #define SODEBUG  1
 #define DEBUGGING  1
 
-#define INTERRUPT  0
-
-#if ! INTERRUPT
-#define splx(x)  x
-#endif
+// N.B. the bootloader is bogus in interrupt mode because of the memory layout;
+//      in INTERRUPT mode we run without a linker file!
+//#define INTERRUPT  1
 
 #define NULL ((void*)0)
 
+#if ! INTERRUPT
 #define FLASH_START  0x9D000000
-#define FLASH_BYTES  (256*1024)  // the smallest part we support
+#define FLASH_BYTES  BMXPFMSZ
 #define FLASH_PAGE_SIZE  4096
+#else
+// N.B. these numbers are bogus and just for testing INTERRUPT mode
+#define FLASH_START  0x9D010000
+#define FLASH_BYTES  (BMXPFMSZ-0x10000)
+#define FLASH_PAGE_SIZE  4096
+#endif
 
 #define USER_APP_ADDR  0x9D001000
 

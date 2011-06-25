@@ -66,8 +66,10 @@ usb_string_descriptor(const byte *descriptor, int length);
 
 // *** init ***
 
+#if ! INTERRUPT
 void
 usb_isr(void);
+#endif
 
 void
 usb_uninitialize(void);

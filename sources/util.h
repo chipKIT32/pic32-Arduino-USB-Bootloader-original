@@ -5,6 +5,9 @@
 
 #define TF_LITTLE(x)  (x)
 
+int
+splx(int level);
+
 void *
 memcpy(void *d,  const void *s, size_t n);
 

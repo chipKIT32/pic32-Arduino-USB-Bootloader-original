@@ -49,7 +49,8 @@ flash_erase_pages(uint32 *addr_in, uint32 npages_in)
 
     addr = addr_in;
     npages = npages_in;
-        
+
+    x = splx(7);
     DMACONSET = _DMACON_SUSPEND_MASK;
     while (! DMACONbits.SUSPEND) {
         // NULL
@@ -68,6 +69,7 @@ flash_erase_pages(uint32 *addr_in, uint32 npages_in)
     }
 
     DMACONCLR = _DMACON_SUSPEND_MASK;
+    (void)splx(x);
 
 #if SODEBUG
     for (i = 0; i < npages_in*FLASH_PAGE_SIZE/sizeof(uint32); i++) {
@@ -91,6 +93,7 @@ flash_write_words(uint32 *addr_in, uint32 *data_in, uint32 nwords_in)
     data = data_in;
     nwords = nwords_in;
 
+    x = splx(7);
     DMACONSET = _DMACON_SUSPEND_MASK;
     while (! DMACONbits.SUSPEND) {
         // NULL
@@ -111,6 +114,7 @@ flash_write_words(uint32 *addr_in, uint32 *data_in, uint32 nwords_in)
     }
 
     DMACONCLR = _DMACON_SUSPEND_MASK;
+    (void)splx(x);
 
 #if SODEBUG
     for (i = 0; i < nwords_in; i++) {

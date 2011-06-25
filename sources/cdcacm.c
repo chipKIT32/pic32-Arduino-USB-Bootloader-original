@@ -151,9 +151,6 @@ cdcacm_print(const byte *buffer, int length)
     int x;
 
     ASSERT(length);
-#if INTERRUPT
-    assert(gpl() == 0);
-#endif
 
     if (! cdcacm_attached || discard) {
         return;
@@ -179,16 +176,16 @@ cdcacm_print(const byte *buffer, int length)
             break;
         }
 
-#if INTERRUPT
-        splx(x);
-        delay(1);
-        if (m++ > 1000) {
-            discard = true;
-            return;
-        }
-        x = splx(7);
-#else
+#if ! INTERRUPT
         usb_isr();
+#else
+        splx(x);
+        //delay(1);
+        //if (m++ > 1000) {
+        //    discard = true;
+        //    return;
+        //}
+        x = splx(7);
 #endif
     }
 

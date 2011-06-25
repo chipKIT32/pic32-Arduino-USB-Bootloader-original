@@ -9,6 +9,38 @@
 
 #include "main.h"
 
+// set the current interrupt mask level and return the old one
+int
+splx(int level)
+{
+#if ! INTERRUPT
+    return 0;
+#else
+    int csr;
+    int oldlevel;
+
+    // get the sr
+    csr = _CP0_GET_STATUS();
+
+    oldlevel = (csr >> 10) & 7;
+    if (level <= 0) {
+        // we're going down
+        level = -level;
+    } else {
+        // we're going up
+        level = MAX(level, oldlevel);
+    }
+    assert(level >= 0 && level <= 7);
+    csr = (csr & 0xffffe3ff) | (level << 10);
+
+    // update the sr
+    _CP0_SET_STATUS(csr);
+
+    assert(oldlevel >= 0 && oldlevel <= 7);
+    return -oldlevel;
+#endif
+}
+
 void *
 memcpy(void *d,  const void *s, size_t n)
 {

@@ -13,7 +13,12 @@
 // our LED interface
 #define LEDTRIS  TRISEbits.TRISE0  // RE0
 #define LEDLAT  LATEbits.LATE0  // RE0
+
+#if ! INTERRUPT
 #define LED_BLINK_LOOPS  100000  // about 4Hz
+#else
+#define LED_BLINK_LOOPS  200000  // about 4Hz
+#endif
 
 // if PRGSWITCH is #defined, we'll use the PRG switch below to control
 // bootloader vs application entry on boot; otherwise, we use a 10 second
@@ -344,8 +349,10 @@ avrbl_run(void)
             jump_to_app();
         }
 
+#if ! INTERRUPT
         // we poll the USB periodically
         usb_isr();
+#endif
 
         // if we've received an stk500v2 request...
         if (ready) {
