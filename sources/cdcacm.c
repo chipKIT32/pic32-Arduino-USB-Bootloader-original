@@ -376,7 +376,7 @@ cdcacm_register(cdcacm_reset_cbfn reset)
 }
 
 /*
-From: CDCACM Support
+From: FTDI Support
 To: 'Rich Testardi at Home' 
 Sent: Monday, March 24, 2008 4:46 AM
 Subject: RE: Custom PID?
@@ -394,7 +394,7 @@ To reprogram the EEPROM use MPROG.
 The help appendix of this utility will show you how to edit the driver for
 your new identity.
 
-http://www.cdcacmchip.com/Resources/Utilities/MProg3.0_Setup.exe
+http://www.ftdichip.com/Resources/Utilities/MProg3.0_Setup.exe
 
 NOTE 1: Editing the driver for your new identity will invalidate any current
 driver certification.
@@ -407,7 +407,7 @@ Regards,
 Gordon Lunn
 Support Engineer
 
-CDCACM Ltd
+FTDI Ltd
 373 Scotland Street
 Glasgow
 Scotland
@@ -416,8 +416,8 @@ G5 8QB
 
 Tel:     +44 (0) 141 429 2777
 Fax:    +44 (0) 141 429 2758
-Skype: cdcacm.support2
-Web:   www.cdcacmchip.com
+Skype: ftdi.support2
+Web:   www.ftdichip.com
 
 -----Original Message-----
 From: Rich Testardi at Home [mailto:rich@testardi.com] 
@@ -430,7 +430,7 @@ Hi,
 I was wondering if I could get a custom PID to use with your VID?
 (I just need one, not a block of 8, if that matters...  I just want
 to be able to control the version of the driver for my hardware
-independent of the version of the driver for two other CDCACM chips
+independent of the version of the driver for two other FTDI chips
 I already have connected to my development PC!)
 
 Name: Rich Testardi
