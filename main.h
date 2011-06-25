@@ -6,6 +6,12 @@
 #define SODEBUG  1
 #define DEBUGGING  1
 
+#define INTERRUPT  0
+
+#if ! INTERRUPT
+#define splx(x)  x
+#endif
+
 #define NULL ((void*)0)
 
 #define FLASH_START  0x9D000000

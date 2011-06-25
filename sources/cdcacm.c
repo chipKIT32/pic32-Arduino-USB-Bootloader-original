@@ -147,8 +147,12 @@ cdcacm_print(const byte *buffer, int length)
     int a;
     int n;
     int m;
+    int x;
 
     ASSERT(length);
+#if INTERRUPT
+    assert(gpl() == 0);
+#endif
 
     if (! cdcacm_attached || discard) {
         return;
@@ -156,6 +160,8 @@ cdcacm_print(const byte *buffer, int length)
 
     // figure out how many buffers we need
     n = (length+sizeof(rx[0])-1)/sizeof(rx[0])+1;
+
+    x = splx(7);
 
     // forever...
     m = 0;
@@ -172,8 +178,17 @@ cdcacm_print(const byte *buffer, int length)
             break;
         }
 
-        // XXX -- replace with a delay for interrupt use
+#if INTERRUPT
+        splx(x);
+        delay(1);
+        if (m++ > 1000) {
+            discard = true;
+            return;
+        }
+        x = splx(7);
+#else
         usb_isr();
+#endif
     }
 
     // while there is more data to send...
@@ -205,6 +220,8 @@ cdcacm_print(const byte *buffer, int length)
         assert(rx_length[rx_out] > 0 && rx_length[rx_out] < PACKET_SIZE);
         usb_device_enqueue(bulk_in_ep, 1, rx[rx_out], rx_length[rx_out]);
     }
+
+    splx(x);
 }
 
 
@@ -285,11 +302,17 @@ static bool waiting;
 void
 cdcacm_command_ack(void)
 {
+    int x;
+
+    x = splx(7);
+
     if (waiting) {
         // start the tx ball rolling
         usb_device_enqueue(bulk_out_ep, 0, tx, sizeof(tx));
         waiting = false;
     }
+
+    splx(x);
 }
 
 // this function implements the CDCACM usb bulk transfer.
