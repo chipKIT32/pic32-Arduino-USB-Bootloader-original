@@ -51,8 +51,8 @@
         </linkerTool>
       </compileType>
       <C32>
-        <property key="extra-include-directories" value="..;../sources"/>
         <property key="additional-warnings" value="false"/>
+        <property key="extra-include-directories" value="..;../sources"/>
         <property key="preprocessor-macros" value=""/>
         <property key="exclude-floating-point" value="true"/>
         <property key="make-warnings-into-errors" value="false"/>
@@ -132,8 +132,8 @@
         </linkerTool>
       </compileType>
       <C32>
-        <property key="extra-include-directories" value="..;../sources"/>
         <property key="additional-warnings" value="false"/>
+        <property key="extra-include-directories" value="..;../sources"/>
         <property key="preprocessor-macros" value="PRGSWITCH=1"/>
         <property key="exclude-floating-point" value="true"/>
         <property key="make-warnings-into-errors" value="false"/>
@@ -213,8 +213,8 @@
         </linkerTool>
       </compileType>
       <C32>
-        <property key="extra-include-directories" value="..;../sources"/>
         <property key="additional-warnings" value="false"/>
+        <property key="extra-include-directories" value="..;../sources"/>
         <property key="preprocessor-macros" value="PRGSWITCH=1"/>
         <property key="exclude-floating-point" value="true"/>
         <property key="make-warnings-into-errors" value="false"/>
@@ -294,8 +294,8 @@
         </linkerTool>
       </compileType>
       <C32>
-        <property key="extra-include-directories" value="..;../sources"/>
         <property key="additional-warnings" value="false"/>
+        <property key="extra-include-directories" value="..;../sources"/>
         <property key="preprocessor-macros" value="PRGSWITCH=1"/>
         <property key="exclude-floating-point" value="true"/>
         <property key="make-warnings-into-errors" value="false"/>

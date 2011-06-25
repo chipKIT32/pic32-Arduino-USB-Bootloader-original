@@ -3,7 +3,7 @@
 #ifndef MAIN_INCLUDED
 
 // enable SODEBUG to enable assert()s; ASSERT()s are always enabled
-#define SODEBUG  1
+//#define SODEBUG  1
 #define DEBUGGING  1
 
 // N.B. the bootloader is bogus in interrupt mode because of the memory layout;
