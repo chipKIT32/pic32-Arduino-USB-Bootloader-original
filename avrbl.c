@@ -5,7 +5,8 @@
 //
 // This file originated from the cpustick.com skeleton project from
 // http://www.cpustick.com/downloads.htm and was originally written
-// by Rich Testardi; please preserve this reference.
+// by Rich Testardi; please preserve this reference and share bug
+// fixes with rich@testardi.com.
 
 #include "main.h"
 

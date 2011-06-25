@@ -5,11 +5,12 @@
 //
 // This file originated from the cpustick.com skeleton project from
 // http://www.cpustick.com/downloads.htm and was originally written
-// by Rich Testardi; please preserve this reference.
+// by Rich Testardi; please preserve this reference and share bug
+// fixes with rich@testardi.com.
 
 #include "main.h"
 
-// REVISIT -- move to relocated compat.h
+// XXX -- move to relocated compat.h
 #define MCF_USB_OTG_CTL  U1CON
 #define MCF_USB_OTG_CTL_USB_EN_SOF_EN  _U1CON_SOFEN_MASK
 #define MCF_USB_OTG_OTG_CTRL  U1OTGCON
@@ -284,22 +285,24 @@ static byte descriptor[DEVICE_DESCRIPTOR_SIZE];
 static byte configuration[CONFIGURATION_DESCRIPTOR_SIZE];
 
 // called by usb on device attach
-// XXX -- uncomment for interrupt use
-//__ISR(45, ipl6) // REVISIT -- ipl?
+#if INTERRUPT
+__ISR(45, ipl6) // XXX -- _USB_1_VECTOR, ipl?
+#endif
 void
 usb_isr(void)
 {
     int rv;
 
     if (! bdts) {
-        return;  // revisit
+        return;  // XXX
     }
     
     assert(! usb_in_isr);
     assert((usb_in_isr = true) ? true : true);
     
-    // XXX -- uncomment for interrupt use
-    //IFS1CLR = 0x02000000; // USBIF
+#if INTERRUPT
+    IFS1CLR = 0x02000000; // USBIF
+#endif
     
     // *** device ***
     
@@ -643,10 +646,11 @@ usb_initialize(void)
     U1PWRCbits.USBPWR = 1;
 
     // enable int
-    // XXX -- uncomment for interrupt use
-    //IEC1bits.USBIE = 1;
-    //IPC11bits.USBIP = 6;
-    //IPC11bits.USBIS = 0;
+#if INTERRUPT
+    IEC1bits.USBIE = 1;
+    IPC11bits.USBIP = 6;
+    IPC11bits.USBIS = 0;
+#endif
 
     MCF_USB_OTG_SOF_THLD = 74;
 

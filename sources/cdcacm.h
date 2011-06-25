@@ -11,5 +11,5 @@ void
 cdcacm_command_ack(void);
 
 void
-cdcacm_register(cdcacm_reset_cbfn reset);  // revisit -- register receive upcall!
+cdcacm_register(cdcacm_reset_cbfn reset);  // XXX -- register receive upcall!
 
