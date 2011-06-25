@@ -202,6 +202,7 @@ avrbl_message(byte *request, int size)
     switch (*request) {
         case CMD_SIGN_ON:
             active = true;
+            erased = false;
             reply[replyi++] = 8;
             strcpy(reply+replyi, "STK500_2");
             replyi += 8;
@@ -347,6 +348,7 @@ avrbl_run(void)
         if (loaded && loops >= loaded+AVRBL_DELAY) {
             // launch the application!
             jump_to_app();
+            loaded = false;
         }
 
 #if ! INTERRUPT

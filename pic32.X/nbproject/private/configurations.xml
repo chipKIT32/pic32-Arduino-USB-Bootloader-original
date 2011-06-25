@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="62">
   <projectmakefile>Makefile</projectmakefile>
-  <defaultConf>2</defaultConf>
+  <defaultConf>3</defaultConf>
   <confs>
     <conf name="default" type="2">
       <platformToolSN></platformToolSN>
@@ -22,7 +22,7 @@
       </runprofile>
     </conf>
     <conf name="UBW32_MX460" type="2">
-      <platformToolSN>:=MPLABCommUSB:=04D8:=900A:=0002:=Microchip Technology Inc.:=PICkit 3:=BUR110376379:=o:=en</platformToolSN>
+      <platformToolSN>:=MPLABCommUSB:=04D8:=900A:=0002:=Microchip Technology Inc.:=PICkit 3:=BUR110376379:=x:=en</platformToolSN>
       <languageToolchainDir>C:\Program Files\Microchip\MPLAB C32 Suite\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
@@ -40,7 +40,7 @@
       </runprofile>
     </conf>
     <conf name="UBW32_MX795" type="2">
-      <platformToolSN>:=MPLABCommUSB:=04D8:=900A:=0002:=Microchip Technology Inc.:=PICkit 3:=BUR110376379:=o:=en</platformToolSN>
+      <platformToolSN>:=MPLABCommUSB:=04D8:=900A:=0002:=Microchip Technology Inc.:=PICkit 3:=BUR110376379:=x:=en</platformToolSN>
       <languageToolchainDir>C:\Program Files\Microchip\MPLAB C32 Suite\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
@@ -58,7 +58,7 @@
       </runprofile>
     </conf>
     <conf name="CUI32_MX440" type="2">
-      <platformToolSN>:=MPLABCommUSB:=04D8:=900A:=0002:=Microchip Technology Inc.:=PICkit 3:=BUR110376379:=o:=en</platformToolSN>
+      <platformToolSN>:=MPLABCommUSB:=04D8:=900A:=0002:=Microchip Technology Inc.:=PICkit 3:=BUR110376379:=x:=en</platformToolSN>
       <languageToolchainDir>C:\Program Files\Microchip\MPLAB C32 Suite\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
