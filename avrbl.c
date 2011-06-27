@@ -333,22 +333,25 @@ avrbl_run(void)
         // increment our loop counter
         loops++;
 
-        // blink the heartbeat LED
-        LEDLAT = (loops/LED_BLINK_LOOPS)%2;
+        // we don't need this on every single iteration
+        if (loops%1000 == 0) {
+            // blink the heartbeat LED
+            LEDLAT = (loops/LED_BLINK_LOOPS)%2 && ((loops/LED_BLINK_LOOPS)%8<6);
 
 #if ! PRGSWITCH
-        // if we've been here too long without stk500v2 becoming active...
-        if (loops >= AVRBL_LOOPS && ! active) {
-            // launch the application!
-            jump_to_app();
-        }
+            // if we've been here too long without stk500v2 becoming active...
+            if (loops >= AVRBL_LOOPS && ! active) {
+                // launch the application!
+                jump_to_app();
+            }
 #endif
 
-        // if we've loaded the application and had a small delay...
-        if (loaded && loops >= loaded+AVRBL_DELAY) {
-            // launch the application!
-            jump_to_app();
-            loaded = false;
+            // if we've loaded the application and had a small delay...
+            if (loaded && loops >= loaded+AVRBL_DELAY) {
+                // launch the application!
+                jump_to_app();
+                loaded = false;
+            }
         }
 
 #if ! INTERRUPT
