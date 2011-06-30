@@ -11,8 +11,13 @@
 #include "main.h"
 
 // our LED interface
+#if PINCONFIG == 1
+#define LEDTRIS  TRISBbits.TRISB13  // RB13
+#define LEDLAT  LATBbits.LATB13  // RB13
+#else
 #define LEDTRIS  TRISEbits.TRISE0  // RE0
 #define LEDLAT  LATEbits.LATE0  // RE0
+#endif
 
 #if ! INTERRUPT
 #define LED_BLINK_LOOPS  100000  // about 4Hz
@@ -25,8 +30,13 @@
 // not-pressed state of the port; otherwise, we use a 10 second timer.
 #ifdef PRGSWITCH
 // our PRG switch
+#if PINCONFIG == 1
+#define PRGTRIS  TRISAbits.TRISA7  // RA7
+#define PRGPORT  PORTAbits.RA7  // RA7
+#else
 #define PRGTRIS  TRISEbits.TRISE7  // RE7
 #define PRGPORT  PORTEbits.RE7  // RE7
+#endif
 
 #define AVRBL_LOOPS  0  // forever
 #else

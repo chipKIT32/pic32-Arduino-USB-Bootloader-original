@@ -32,3 +32,17 @@ CND_ARTIFACT_PATH_CUI32_MX440=dist/CUI32_MX440/production/pic32.X.production.elf
 CND_PACKAGE_DIR_CUI32_MX440=${CND_DISTDIR}/CUI32_MX440/package
 CND_PACKAGE_NAME_CUI32_MX440=pic32.x.tar
 CND_PACKAGE_PATH_CUI32_MX440=${CND_DISTDIR}/CUI32_MX440/package/pic32.x.tar
+# Cerebot_MX4 configuration
+CND_ARTIFACT_DIR_Cerebot_MX4=dist/Cerebot_MX4/production
+CND_ARTIFACT_NAME_Cerebot_MX4=pic32.X.production.elf
+CND_ARTIFACT_PATH_Cerebot_MX4=dist/Cerebot_MX4/production/pic32.X.production.elf
+CND_PACKAGE_DIR_Cerebot_MX4=${CND_DISTDIR}/Cerebot_MX4/package
+CND_PACKAGE_NAME_Cerebot_MX4=pic32.x.tar
+CND_PACKAGE_PATH_Cerebot_MX4=${CND_DISTDIR}/Cerebot_MX4/package/pic32.x.tar
+# Cerebot_MX7 configuration
+CND_ARTIFACT_DIR_Cerebot_MX7=dist/Cerebot_MX7/production
+CND_ARTIFACT_NAME_Cerebot_MX7=pic32.X.production.elf
+CND_ARTIFACT_PATH_Cerebot_MX7=dist/Cerebot_MX7/production/pic32.X.production.elf
+CND_PACKAGE_DIR_Cerebot_MX7=${CND_DISTDIR}/Cerebot_MX7/package
+CND_PACKAGE_NAME_Cerebot_MX7=pic32.x.tar
+CND_PACKAGE_PATH_Cerebot_MX7=${CND_DISTDIR}/Cerebot_MX7/package/pic32.x.tar
