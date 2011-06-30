@@ -631,6 +631,9 @@ usb_uninitialize(void)
     // disable usb device mode and usb device pull ups
     MCF_USB_OTG_CTL = 0;
     MCF_USB_OTG_OTG_CTRL = 0;
+
+    // power off
+    U1PWRCbits.USBPWR = 0;
 }
 
 void

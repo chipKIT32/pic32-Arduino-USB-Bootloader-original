@@ -21,9 +21,9 @@
 #endif
 
 // if PRGSWITCH is #defined, we'll use the PRG switch below to control
-// bootloader vs application entry on boot; otherwise, we use a 10 second
-// timer.
-#if PRGSWITCH
+// bootloader vs application entry on boot, where PRGSWITCH defines the
+// not-pressed state of the port; otherwise, we use a 10 second timer.
+#ifdef PRGSWITCH
 // our PRG switch
 #define PRGTRIS  TRISEbits.TRISE7  // RE7
 #define PRGPORT  PORTEbits.RE7  // RE7
@@ -34,6 +34,7 @@
 #endif
 
 #define AVRBL_DELAY  400000  // about 0.5 seconds
+
 
 // the stk500v2 state machine states
 // see: http://www.atmel.com/dyn/resources/prod_documents/doc2591.pdf
@@ -161,10 +162,8 @@ void
 jump_to_app(void)
 {
     if (*(uint *)USER_APP_ADDR != -1) {
-#if PRGSWITCH
         // disconnect the USB device from the bus
         usb_uninitialize();
-#endif
 
         // jump to the user application
         ((void(*)(void))USER_APP_ADDR)();
@@ -313,12 +312,12 @@ avrbl_message(byte *request, int size)
 void
 avrbl_run(void)
 {    
-#if PRGSWITCH
+#ifdef PRGSWITCH
     // configure the PRG switch
     PRGTRIS = 1;
 
     // if the PRG switch is not pressed...
-    if (PRGPORT) {
+    if (PRGPORT == PRGSWITCH) {
         // launch the application!
         jump_to_app();
     }
@@ -338,7 +337,7 @@ avrbl_run(void)
             // blink the heartbeat LED
             LEDLAT = (loops/LED_BLINK_LOOPS)%2 && ((loops/LED_BLINK_LOOPS)%8<6);
 
-#if ! PRGSWITCH
+#ifndef PRGSWITCH
             // if we've been here too long without stk500v2 becoming active...
             if (loops >= AVRBL_LOOPS && ! active) {
                 // launch the application!
