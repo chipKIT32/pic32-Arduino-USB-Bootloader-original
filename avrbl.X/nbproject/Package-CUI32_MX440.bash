@@ -10,9 +10,9 @@ CND_CONF=CUI32_MX440
 CND_DISTDIR=dist
 TMPDIR=build/${CND_CONF}/${IMAGE_TYPE}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/pic32.X.${IMAGE_TYPE}.elf
-OUTPUT_BASENAME=pic32.X.${IMAGE_TYPE}.elf
-PACKAGE_TOP_DIR=pic32.x/
+OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/avrbl.X.${IMAGE_TYPE}.elf
+OUTPUT_BASENAME=avrbl.X.${IMAGE_TYPE}.elf
+PACKAGE_TOP_DIR=avrbl.x/
 
 # Functions
 function checkReturnCode
@@ -57,15 +57,15 @@ mkdir -p ${TMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory ${TMPDIR}/pic32.x/bin
+makeDirectory ${TMPDIR}/avrbl.x/bin
 copyFileToTmpDir "${OUTPUT_PATH}" "${TMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/package/pic32.x.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/package/avrbl.x.tar
 cd ${TMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/pic32.x.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/avrbl.x.tar *
 checkReturnCode
 
 # Cleanup

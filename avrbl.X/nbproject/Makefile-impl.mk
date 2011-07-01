@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=pic32.X
+PROJECTNAME=avrbl.X
 
 # Active Configuration
 DEFAULTCONF=default

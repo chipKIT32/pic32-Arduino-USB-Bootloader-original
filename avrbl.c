@@ -19,6 +19,11 @@
 #define LEDLAT  LATEbits.LATE0  // RE0
 #endif
 
+// this is a 32 bit LED blink pattern that may be specified in the gcc configuration
+#ifndef LEDBLINK
+#define LEDBLINK  0x55aa55aa
+#endif
+
 #if ! INTERRUPT
 #define LED_BLINK_LOOPS  100000  // about 4Hz
 #else
@@ -166,6 +171,8 @@ avrbl_receive(const byte *buffer, int length)
     return true;
 }
 
+static volatile uint delay;
+
 // this function jumps to the user application if it is present;
 // it returns otherwise
 void
@@ -174,6 +181,11 @@ jump_to_app(void)
     if (*(uint *)USER_APP_ADDR != -1) {
         // disconnect the USB device from the bus
         usb_uninitialize();
+
+        // wait a small while
+        for (delay = 0; delay < 10000000; delay++) {
+            // NULL
+        }
 
         // jump to the user application
         ((void(*)(void))USER_APP_ADDR)();
@@ -321,7 +333,9 @@ avrbl_message(byte *request, int size)
 // this function implements the main avrdude bootloader program loop.
 void
 avrbl_run(void)
-{    
+{
+    uint bits;
+
 #ifdef PRGSWITCH
     // configure the PRG switch
     PRGTRIS = 1;
@@ -337,15 +351,19 @@ avrbl_run(void)
     LEDTRIS = 0;
 
     // forever...
+    bits = 1;
     loops = 0;
     for (;;) {
         // increment our loop counter
         loops++;
 
-        // we don't need this on every single iteration
-        if (loops%1000 == 0) {
-            // blink the heartbeat LED
-            LEDLAT = (loops/LED_BLINK_LOOPS)%2 && ((loops/LED_BLINK_LOOPS)%8<6);
+        // if it may be time for a blink...
+        if (loops%LED_BLINK_LOOPS == 0) {
+            // (circular) rotate bits left
+            bits = (bits<<1) | !!(bits&0x80000000);
+
+            // blink the heartbeat LED with the specified pattern
+            LEDLAT = !!(bits&LEDBLINK);
 
 #ifndef PRGSWITCH
             // if we've been here too long without stk500v2 becoming active...
