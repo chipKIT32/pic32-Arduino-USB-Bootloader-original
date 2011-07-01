@@ -23,6 +23,9 @@
 #ifndef LEDBLINK
 #define LEDBLINK  0x55aa55aa
 #endif
+#ifndef LEDXOR
+#define LEDXOR  0
+#endif
 
 #if ! INTERRUPT
 #define LED_BLINK_LOOPS  100000  // about 4Hz
@@ -363,7 +366,7 @@ avrbl_run(void)
             bits = (bits<<1) | !!(bits&0x80000000);
 
             // blink the heartbeat LED with the specified pattern
-            LEDLAT = !!(bits&LEDBLINK);
+            LEDLAT = !!(bits&LEDBLINK) ^ LEDXOR;
 
 #ifndef PRGSWITCH
             // if we've been here too long without stk500v2 becoming active...
