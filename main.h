@@ -16,14 +16,14 @@
 #define FLASH_START  0x9D000000
 #define FLASH_BYTES  (BMXPFMSZ-4096)
 #define FLASH_PAGE_SIZE  4096
+#define USER_APP_ADDR  0x9D001000
 #else
 // N.B. these numbers are bogus and just for testing INTERRUPT mode
 #define FLASH_START  0x9D010000
 #define FLASH_BYTES  (BMXPFMSZ-0x10000-4096)
 #define FLASH_PAGE_SIZE  4096
+#define USER_APP_ADDR  0x9D010000
 #endif
-
-#define USER_APP_ADDR  0x9D001000
 
 #define asm_halt()  asm("SDBBP");
 
