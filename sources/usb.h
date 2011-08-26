@@ -1,4 +1,5 @@
-// *** usb.h *******************************************************************
+//************************************************************************
+//	usb.h
 
 #define SETUP_SIZE  8
 
@@ -52,28 +53,21 @@ typedef int (*usb_control_cbfn)(struct setup *setup, byte *buffer, int length);
 typedef int (*usb_bulk_cbfn)(bool in, byte *buffer, int length);
 typedef void (*usb_interrupt_cbfn)(void);
 
-void
-usb_register(usb_reset_cbfn reset, usb_control_cbfn control_transfer, usb_bulk_cbfn bulk_transfer);
+void	usb_register(usb_reset_cbfn reset, usb_control_cbfn control_transfer, usb_bulk_cbfn bulk_transfer);
 
-void
-usb_device_descriptor(const byte *descriptor, int length);
+void	usb_device_descriptor(const byte *descriptor, int length);
 
-void
-usb_configuration_descriptor(const byte *descriptor, int length);
+void	usb_configuration_descriptor(const byte *descriptor, int length);
 
-void
-usb_string_descriptor(const byte *descriptor, int length);
+void	usb_string_descriptor(const byte *descriptor, int length);
 
 // *** init ***
 
 #if ! INTERRUPT
-void
-usb_isr(void);
+	void	usb_isr(void);
 #endif
 
-void
-usb_uninitialize(void);
+void	usb_uninitialize(void);
 
-void
-usb_initialize(void);
+void	usb_initialize(void);
 

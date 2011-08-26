@@ -31,7 +31,7 @@ DEFAULTCONF=default
 CONF=${DEFAULTCONF}
 
 # All Configurations
-ALLCONFS=default UBW32_MX460 UBW32_MX795 CUI32_MX440 Cerebot_MX4 Cerebot_MX7 
+ALLCONFS=default UBW32_MX460 UBW32_MX795 CUI32_MX440 Cerebot_MX4 Cerebot_MX7 Microchip_USB_Starter_Kit Microchip_Ethernet_Starter_Kit 
 
 
 # build
