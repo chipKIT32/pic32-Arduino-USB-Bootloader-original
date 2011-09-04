@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="62">
   <projectmakefile>Makefile</projectmakefile>
-  <defaultConf>8</defaultConf>
+  <defaultConf>9</defaultConf>
   <confs>
     <conf name="default" type="2">
       <platformToolSN></platformToolSN>
@@ -148,7 +148,25 @@
       </runprofile>
     </conf>
     <conf name="MirkoElektronika_mikroMedia_Board" type="2">
-      <platformToolSN>:=MPLABCommUSB:=04D8:=9009:=0100:=Microchip Technology, Inc. (www.microchip.com):=MPLAB ICD3 tm (www.microchip.com):=JIT100135898:=x:=en</platformToolSN>
+      <platformToolSN></platformToolSN>
+      <languageToolchainDir>/Applications/microchip/mplabc32/v1.11a/bin</languageToolchainDir>
+      <mdbdebugger version="1">
+        <placeholder1>place holder 1</placeholder1>
+        <placeholder2>place holder 2</placeholder2>
+      </mdbdebugger>
+      <runprofile version="6">
+        <args></args>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <console-type>0</console-type>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="MirkoElektronika_MultiMedia_Board" type="2">
+      <platformToolSN>:=MPLABCommUSB:=04D8:=9009:=0100:=Microchip Technology, Inc. (www.microchip.com):=MPLAB ICD3 tm (www.microchip.com):=JIT110233183:=x:=en</platformToolSN>
       <languageToolchainDir>/Applications/microchip/mplabc32/v1.11a/bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>

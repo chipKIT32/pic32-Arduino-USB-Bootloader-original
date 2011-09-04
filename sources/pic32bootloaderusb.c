@@ -95,6 +95,17 @@
 	#define PRGTRIS				TRISGbits.TRISG14
 	#define PRGPORT				PORTGbits.RG14
 
+#elif defined(_BOARD_MIKROE_MULTIMEDIA_)
+
+	#define	PRGSWITCH			0					//*	PRGSWITCH active low
+
+	//*	LED on port A bit 3
+	#define	LEDTRIS				TRISAbits.TRISA3
+	#define	LEDLAT				LATAbits.LATA3
+	// our PRG switch
+	#define PRGTRIS				TRISAbits.TRISA10
+	#define PRGPORT				PORTAbits.RA10
+
 #else
 	#define	LEDTRIS				TRISEbits.TRISE0	// RE0
 	#define	LEDLAT				LATEbits.LATE0		// RE0

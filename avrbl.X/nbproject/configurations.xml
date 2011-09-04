@@ -54,8 +54,8 @@
         <property key="make-warnings-into-errors" value="false"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="use-indirect-calls" value="false"/>
-        <property key="support-ansi" value="false"/>
         <property key="strict-ansi" value="false"/>
+        <property key="support-ansi" value="false"/>
         <property key="optimization-level" value="-Os"/>
         <property key="place-data-into-section" value="false"/>
         <property key="post-instruction-scheduling" value="default"/>
@@ -73,8 +73,8 @@
         <property key="list-file" value=""/>
         <property key="list-source" value="false"/>
         <property key="list-assembly" value="false"/>
-        <property key="warning-level" value=""/>
         <property key="extra-include-directories-for-preprocessor" value=""/>
+        <property key="warning-level" value=""/>
         <property key="list-section-info" value="false"/>
         <property key="omit-forms" value="false"/>
         <property key="list-symbols" value="false"/>
@@ -160,8 +160,8 @@
         <property key="make-warnings-into-errors" value="false"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="use-indirect-calls" value="false"/>
-        <property key="support-ansi" value="false"/>
         <property key="strict-ansi" value="false"/>
+        <property key="support-ansi" value="false"/>
         <property key="optimization-level" value="-Os"/>
         <property key="place-data-into-section" value="false"/>
         <property key="post-instruction-scheduling" value="default"/>
@@ -179,8 +179,8 @@
         <property key="list-file" value=""/>
         <property key="list-source" value="false"/>
         <property key="list-assembly" value="false"/>
-        <property key="warning-level" value=""/>
         <property key="extra-include-directories-for-preprocessor" value=""/>
+        <property key="warning-level" value=""/>
         <property key="list-section-info" value="false"/>
         <property key="omit-forms" value="false"/>
         <property key="list-symbols" value="false"/>
@@ -241,8 +241,8 @@
         <property key="make-warnings-into-errors" value="false"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="use-indirect-calls" value="false"/>
-        <property key="support-ansi" value="false"/>
         <property key="strict-ansi" value="false"/>
+        <property key="support-ansi" value="false"/>
         <property key="optimization-level" value="-Os"/>
         <property key="place-data-into-section" value="false"/>
         <property key="post-instruction-scheduling" value="default"/>
@@ -260,8 +260,8 @@
         <property key="list-file" value=""/>
         <property key="list-source" value="false"/>
         <property key="list-assembly" value="false"/>
-        <property key="warning-level" value=""/>
         <property key="extra-include-directories-for-preprocessor" value=""/>
+        <property key="warning-level" value=""/>
         <property key="list-section-info" value="false"/>
         <property key="omit-forms" value="false"/>
         <property key="list-symbols" value="false"/>
@@ -322,8 +322,8 @@
         <property key="make-warnings-into-errors" value="false"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="use-indirect-calls" value="false"/>
-        <property key="support-ansi" value="false"/>
         <property key="strict-ansi" value="false"/>
+        <property key="support-ansi" value="false"/>
         <property key="optimization-level" value="-Os"/>
         <property key="place-data-into-section" value="false"/>
         <property key="post-instruction-scheduling" value="default"/>
@@ -341,8 +341,8 @@
         <property key="list-file" value=""/>
         <property key="list-source" value="false"/>
         <property key="list-assembly" value="false"/>
-        <property key="warning-level" value=""/>
         <property key="extra-include-directories-for-preprocessor" value=""/>
+        <property key="warning-level" value=""/>
         <property key="list-section-info" value="false"/>
         <property key="omit-forms" value="false"/>
         <property key="list-symbols" value="false"/>
@@ -403,8 +403,8 @@
         <property key="make-warnings-into-errors" value="false"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="use-indirect-calls" value="false"/>
-        <property key="support-ansi" value="false"/>
         <property key="strict-ansi" value="false"/>
+        <property key="support-ansi" value="false"/>
         <property key="optimization-level" value="-Os"/>
         <property key="place-data-into-section" value="false"/>
         <property key="post-instruction-scheduling" value="default"/>
@@ -422,8 +422,8 @@
         <property key="list-file" value=""/>
         <property key="list-source" value="false"/>
         <property key="list-assembly" value="false"/>
-        <property key="warning-level" value=""/>
         <property key="extra-include-directories-for-preprocessor" value=""/>
+        <property key="warning-level" value=""/>
         <property key="list-section-info" value="false"/>
         <property key="omit-forms" value="false"/>
         <property key="list-symbols" value="false"/>
@@ -484,8 +484,8 @@
         <property key="make-warnings-into-errors" value="false"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="use-indirect-calls" value="false"/>
-        <property key="support-ansi" value="false"/>
         <property key="strict-ansi" value="false"/>
+        <property key="support-ansi" value="false"/>
         <property key="optimization-level" value="-Os"/>
         <property key="place-data-into-section" value="false"/>
         <property key="post-instruction-scheduling" value="default"/>
@@ -503,8 +503,8 @@
         <property key="list-file" value=""/>
         <property key="list-source" value="false"/>
         <property key="list-assembly" value="false"/>
-        <property key="warning-level" value=""/>
         <property key="extra-include-directories-for-preprocessor" value=""/>
+        <property key="warning-level" value=""/>
         <property key="list-section-info" value="false"/>
         <property key="omit-forms" value="false"/>
         <property key="list-symbols" value="false"/>
@@ -565,8 +565,8 @@
         <property key="make-warnings-into-errors" value="false"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="use-indirect-calls" value="false"/>
-        <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="strict-ansi" value="false"/>
         <property key="optimization-level" value="-Os"/>
         <property key="place-data-into-section" value="false"/>
         <property key="post-instruction-scheduling" value="default"/>
@@ -584,8 +584,8 @@
         <property key="list-file" value=""/>
         <property key="list-source" value="false"/>
         <property key="list-assembly" value="false"/>
-        <property key="warning-level" value=""/>
         <property key="extra-include-directories-for-preprocessor" value=""/>
+        <property key="warning-level" value=""/>
         <property key="list-section-info" value="false"/>
         <property key="omit-forms" value="false"/>
         <property key="list-symbols" value="false"/>
@@ -646,8 +646,8 @@
         <property key="make-warnings-into-errors" value="false"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="use-indirect-calls" value="false"/>
-        <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="strict-ansi" value="false"/>
         <property key="optimization-level" value="-Os"/>
         <property key="place-data-into-section" value="false"/>
         <property key="post-instruction-scheduling" value="default"/>
@@ -665,8 +665,8 @@
         <property key="list-file" value=""/>
         <property key="list-source" value="false"/>
         <property key="list-assembly" value="false"/>
-        <property key="warning-level" value=""/>
         <property key="extra-include-directories-for-preprocessor" value=""/>
+        <property key="warning-level" value=""/>
         <property key="list-section-info" value="false"/>
         <property key="omit-forms" value="false"/>
         <property key="list-symbols" value="false"/>
@@ -727,6 +727,87 @@
         <property key="make-warnings-into-errors" value="false"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="use-indirect-calls" value="false"/>
+        <property key="support-ansi" value="false"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="optimization-level" value="-Os"/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="enable-omit-frame-pointer" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <appendMe value="-fno-builtin"/>
+      </C32>
+      <C32-AS>
+        <property key="omit-debug-dirs" value="false"/>
+        <property key="extra-include-directories-for-assembler" value=".."/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="exclude-floating-point-library" value="false"/>
+        <property key="list-file" value=""/>
+        <property key="list-source" value="false"/>
+        <property key="list-assembly" value="false"/>
+        <property key="extra-include-directories-for-preprocessor" value=""/>
+        <property key="warning-level" value=""/>
+        <property key="list-section-info" value="false"/>
+        <property key="omit-forms" value="false"/>
+        <property key="list-symbols" value="false"/>
+        <property key="keep-locals" value="false"/>
+        <property key="false-conditionals" value="false"/>
+        <property key="expand-macros" value="false"/>
+        <property key="assembler-symbols" value=""/>
+      </C32-AS>
+      <C32-LD>
+        <property key="exclude-floating-point-library" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="warn-section-align" value="false"/>
+        <property key="heap-size" value="0"/>
+        <property key="no-startup-files" value="false"/>
+        <property key="remove-unused-sections" value="true"/>
+        <property key="stack-size" value="3072"/>
+        <property key="linker-symbols" value=""/>
+        <property key="trace-symbols" value=""/>
+        <property key="map-file" value="&quot;$(BINDIR_)$(TARGETBASE).map&quot;"/>
+        <property key="exclude-standard-libraries" value="false"/>
+        <property key="generate-cross-reference-file" value="false"/>
+        <property key="input-libraries" value=""/>
+        <property key="enable-check-sections" value="false"/>
+        <property key="symbol-stripping" value=""/>
+        <property key="extra-lib-directories"
+                  value="../../../../Program Files/Microchip/MPLAB C32/lib;../../../../Program Files/Microchip/MPLAB C32/pic32mx/lib"/>
+      </C32-LD>
+      <C32Global>
+        <property key="legacy-libc" value="false"/>
+        <property key="no-start-files" value="false"/>
+      </C32Global>
+      <ICD3PlatformTool>
+      </ICD3PlatformTool>
+    </conf>
+    <conf name="MirkoElektronika_MultiMedia_Board" type="2">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <targetDevice>PIC32MX460F512L</targetDevice>
+        <targetHeader></targetHeader>
+        <platformTool>ICD3PlatformTool</platformTool>
+        <languageToolchain>C32</languageToolchain>
+        <languageToolchainVersion>1.11</languageToolchainVersion>
+        <platform>4</platform>
+      </toolsSet>
+      <compileType>
+        <linkerTool>
+          <linkerLibItems>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <C32>
+        <property key="additional-warnings" value="false"/>
+        <property key="extra-include-directories" value="..;../sources"/>
+        <property key="preprocessor-macros" value="_BOARD_MIKROE_MULTIMEDIA_"/>
+        <property key="exclude-floating-point" value="true"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="use-indirect-calls" value="false"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
         <property key="optimization-level" value="-Os"/>
@@ -746,8 +827,8 @@
         <property key="list-file" value=""/>
         <property key="list-source" value="false"/>
         <property key="list-assembly" value="false"/>
-        <property key="warning-level" value=""/>
         <property key="extra-include-directories-for-preprocessor" value=""/>
+        <property key="warning-level" value=""/>
         <property key="list-section-info" value="false"/>
         <property key="omit-forms" value="false"/>
         <property key="list-symbols" value="false"/>
