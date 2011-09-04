@@ -1,10 +1,24 @@
-// *** main.h ******************************************************************
+//************************************************************************
+//	main.h
+//************************************************************************
 
 #ifndef MAIN_INCLUDED
 
 // enable SODEBUG to enable assert()s; ASSERT()s are always enabled
 //#define SODEBUG  1
 #define DEBUGGING  1
+
+
+//#define	_DEBUG_VIA_SERIAL_
+#define	_USE_NVM_FUNCTIONS_
+
+//*	this changes the ASSERT to do serial printing
+#ifdef _DEBUG_VIA_SERIAL_
+	void	Serial_print(char *textString);
+	void	Serial_println(void);
+	void	Serial_PrintLongWordHex(unsigned long longWord);
+#endif
+
 
 // N.B. the bootloader is bogus in interrupt mode because of the memory layout;
 //      in INTERRUPT mode we run without a linker file!
@@ -13,16 +27,16 @@
 #define NULL ((void*)0)
 
 #if ! INTERRUPT
-#define FLASH_START  0x9D000000
-#define FLASH_BYTES  (BMXPFMSZ-4096)
-#define FLASH_PAGE_SIZE  4096
-#define USER_APP_ADDR  0x9D001000
+	#define FLASH_START  0x9D000000
+	#define FLASH_BYTES  (BMXPFMSZ-4096)
+	#define FLASH_PAGE_SIZE  4096
+	#define USER_APP_ADDR  0x9D001000
 #else
-// N.B. these numbers are bogus and just for testing INTERRUPT mode
-#define FLASH_START  0x9D010000
-#define FLASH_BYTES  (BMXPFMSZ-0x10000-4096)
-#define FLASH_PAGE_SIZE  4096
-#define USER_APP_ADDR  0x9D010000
+	// N.B. these numbers are bogus and just for testing INTERRUPT mode
+	#define FLASH_START  0x9D010000
+	#define FLASH_BYTES  (BMXPFMSZ-0x10000-4096)
+	#define FLASH_PAGE_SIZE  4096
+	#define USER_APP_ADDR  0x9D010000
 #endif
 
 #define asm_halt()  asm("SDBBP");
@@ -72,12 +86,16 @@ extern uint32 bus_frequency;
 #include "avrbl.h"
 
 #if SODEBUG
-#define assert(x)  do { if (! (x)) { asm_halt(); } } while (0)
+	#define assert(x)  do { if (! (x)) { asm_halt(); } } while (0)
 #else
-#define assert(x)
+	#define assert(x)
 #endif
 
-#define ASSERT(x)  do { if (! (x)) { asm_halt(); } } while (0)
+#ifdef _DEBUG_VIA_SERIAL_
+	#define ASSERT(x)  do { if (! (x)) { Serial_print("calling asm_halt"); asm_halt(); } } while (0)
+#else
+	#define ASSERT(x)  do { if (! (x)) { asm_halt(); } } while (0)
+#endif
 
 #define MAIN_INCLUDED  1
 #endif  // MAIN_INCLUDED
