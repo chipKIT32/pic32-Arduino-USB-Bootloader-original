@@ -20,6 +20,7 @@
 //*	Aug 27,	2011	<MLS> Adding serial debug
 //*	Aug 28,	2011	<MLS> Discovered bug with pic32mx460F512L 801/PT 
 //*	Aug 28,	2011	<MLS> Changed to NVM routines (added _USE_NVM_FUNCTIONS_)
+//*	Dec  4,	2011	<MLS> Issue #4  Incomplete refactoring in avrbl_run
 //************************************************************************
 
 #include "main.h"
@@ -728,7 +729,7 @@ void	avrbl_run(void)
 
 		#ifndef PRGSWITCH
 			// if we've been here too long without stk500v2 becoming active...
-			if (loops >= AVRBL_LOOPS && !active)
+			if (gLoops >= AVRBL_LOOPS && !active)
 			{
 				// launch the application!
 				jump_to_app();
