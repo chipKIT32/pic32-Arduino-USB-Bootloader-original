@@ -85,8 +85,8 @@ ${OBJECTDIR}/_ext/592584297/usb.o: ../sources/usb.c  nbproject/Makefile-${CND_CO
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/usb.o.d 
 	@${RM} ${OBJECTDIR}/_ext/592584297/usb.o.ok ${OBJECTDIR}/_ext/592584297/usb.o.err 
-	@echo ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/usb.o.d -o ${OBJECTDIR}/_ext/592584297/usb.o ../sources/usb.c  
-	@-${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/usb.o.d -o ${OBJECTDIR}/_ext/592584297/usb.o ../sources/usb.c   2>&1  > ${OBJECTDIR}/_ext/592584297/usb.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/592584297/usb.o.ok ; fi 
+	@echo ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/usb.o.d -o ${OBJECTDIR}/_ext/592584297/usb.o ../sources/usb.c  
+	@-${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/usb.o.d -o ${OBJECTDIR}/_ext/592584297/usb.o ../sources/usb.c   2>&1  > ${OBJECTDIR}/_ext/592584297/usb.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/592584297/usb.o.ok ; fi 
 	@touch ${OBJECTDIR}/_ext/592584297/usb.o.d 
 	
 ifneq (,$(findstring MINGW32,$(OS_CURRENT))) 
@@ -103,8 +103,8 @@ ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o: ../nvm_operation_lib.c  nbproject/Ma
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
 	@${RM} ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o.ok ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o.err 
-	@echo ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o.d -o ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o ../nvm_operation_lib.c  
-	@-${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o.d -o ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o ../nvm_operation_lib.c   2>&1  > ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o.ok ; fi 
+	@echo ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o.d -o ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o ../nvm_operation_lib.c  
+	@-${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o.d -o ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o ../nvm_operation_lib.c   2>&1  > ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o.ok ; fi 
 	@touch ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o.d 
 	
 ifneq (,$(findstring MINGW32,$(OS_CURRENT))) 
@@ -121,8 +121,8 @@ ${OBJECTDIR}/_ext/592584297/main.o: ../sources/main.c  nbproject/Makefile-${CND_
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/main.o.d 
 	@${RM} ${OBJECTDIR}/_ext/592584297/main.o.ok ${OBJECTDIR}/_ext/592584297/main.o.err 
-	@echo ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/main.o.d -o ${OBJECTDIR}/_ext/592584297/main.o ../sources/main.c  
-	@-${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/main.o.d -o ${OBJECTDIR}/_ext/592584297/main.o ../sources/main.c   2>&1  > ${OBJECTDIR}/_ext/592584297/main.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/592584297/main.o.ok ; fi 
+	@echo ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/main.o.d -o ${OBJECTDIR}/_ext/592584297/main.o ../sources/main.c  
+	@-${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/main.o.d -o ${OBJECTDIR}/_ext/592584297/main.o ../sources/main.c   2>&1  > ${OBJECTDIR}/_ext/592584297/main.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/592584297/main.o.ok ; fi 
 	@touch ${OBJECTDIR}/_ext/592584297/main.o.d 
 	
 ifneq (,$(findstring MINGW32,$(OS_CURRENT))) 
@@ -139,8 +139,8 @@ ${OBJECTDIR}/_ext/592584297/flash.o: ../sources/flash.c  nbproject/Makefile-${CN
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/flash.o.d 
 	@${RM} ${OBJECTDIR}/_ext/592584297/flash.o.ok ${OBJECTDIR}/_ext/592584297/flash.o.err 
-	@echo ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/flash.o.d -o ${OBJECTDIR}/_ext/592584297/flash.o ../sources/flash.c  
-	@-${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/flash.o.d -o ${OBJECTDIR}/_ext/592584297/flash.o ../sources/flash.c   2>&1  > ${OBJECTDIR}/_ext/592584297/flash.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/592584297/flash.o.ok ; fi 
+	@echo ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/flash.o.d -o ${OBJECTDIR}/_ext/592584297/flash.o ../sources/flash.c  
+	@-${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/flash.o.d -o ${OBJECTDIR}/_ext/592584297/flash.o ../sources/flash.c   2>&1  > ${OBJECTDIR}/_ext/592584297/flash.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/592584297/flash.o.ok ; fi 
 	@touch ${OBJECTDIR}/_ext/592584297/flash.o.d 
 	
 ifneq (,$(findstring MINGW32,$(OS_CURRENT))) 
@@ -157,8 +157,8 @@ ${OBJECTDIR}/_ext/592584297/cdcacm.o: ../sources/cdcacm.c  nbproject/Makefile-${
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/cdcacm.o.d 
 	@${RM} ${OBJECTDIR}/_ext/592584297/cdcacm.o.ok ${OBJECTDIR}/_ext/592584297/cdcacm.o.err 
-	@echo ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/cdcacm.o.d -o ${OBJECTDIR}/_ext/592584297/cdcacm.o ../sources/cdcacm.c  
-	@-${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/cdcacm.o.d -o ${OBJECTDIR}/_ext/592584297/cdcacm.o ../sources/cdcacm.c   2>&1  > ${OBJECTDIR}/_ext/592584297/cdcacm.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/592584297/cdcacm.o.ok ; fi 
+	@echo ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/cdcacm.o.d -o ${OBJECTDIR}/_ext/592584297/cdcacm.o ../sources/cdcacm.c  
+	@-${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/cdcacm.o.d -o ${OBJECTDIR}/_ext/592584297/cdcacm.o ../sources/cdcacm.c   2>&1  > ${OBJECTDIR}/_ext/592584297/cdcacm.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/592584297/cdcacm.o.ok ; fi 
 	@touch ${OBJECTDIR}/_ext/592584297/cdcacm.o.d 
 	
 ifneq (,$(findstring MINGW32,$(OS_CURRENT))) 
@@ -175,8 +175,8 @@ ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o: ../sources/pic32bootloaderusb.
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d 
 	@${RM} ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.ok ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.err 
-	@echo ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d -o ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o ../sources/pic32bootloaderusb.c  
-	@-${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d -o ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o ../sources/pic32bootloaderusb.c   2>&1  > ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.ok ; fi 
+	@echo ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d -o ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o ../sources/pic32bootloaderusb.c  
+	@-${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d -o ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o ../sources/pic32bootloaderusb.c   2>&1  > ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.ok ; fi 
 	@touch ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d 
 	
 ifneq (,$(findstring MINGW32,$(OS_CURRENT))) 
@@ -193,8 +193,8 @@ ${OBJECTDIR}/_ext/592584297/util.o: ../sources/util.c  nbproject/Makefile-${CND_
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/util.o.d 
 	@${RM} ${OBJECTDIR}/_ext/592584297/util.o.ok ${OBJECTDIR}/_ext/592584297/util.o.err 
-	@echo ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/util.o.d -o ${OBJECTDIR}/_ext/592584297/util.o ../sources/util.c  
-	@-${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/util.o.d -o ${OBJECTDIR}/_ext/592584297/util.o ../sources/util.c   2>&1  > ${OBJECTDIR}/_ext/592584297/util.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/592584297/util.o.ok ; fi 
+	@echo ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/util.o.d -o ${OBJECTDIR}/_ext/592584297/util.o ../sources/util.c  
+	@-${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/util.o.d -o ${OBJECTDIR}/_ext/592584297/util.o ../sources/util.c   2>&1  > ${OBJECTDIR}/_ext/592584297/util.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/592584297/util.o.ok ; fi 
 	@touch ${OBJECTDIR}/_ext/592584297/util.o.d 
 	
 ifneq (,$(findstring MINGW32,$(OS_CURRENT))) 
@@ -212,8 +212,8 @@ ${OBJECTDIR}/_ext/592584297/usb.o: ../sources/usb.c  nbproject/Makefile-${CND_CO
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/usb.o.d 
 	@${RM} ${OBJECTDIR}/_ext/592584297/usb.o.ok ${OBJECTDIR}/_ext/592584297/usb.o.err 
-	@echo ${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/usb.o.d -o ${OBJECTDIR}/_ext/592584297/usb.o ../sources/usb.c  
-	@-${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/usb.o.d -o ${OBJECTDIR}/_ext/592584297/usb.o ../sources/usb.c   2>&1  > ${OBJECTDIR}/_ext/592584297/usb.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/592584297/usb.o.ok ; fi 
+	@echo ${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/usb.o.d -o ${OBJECTDIR}/_ext/592584297/usb.o ../sources/usb.c  
+	@-${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/usb.o.d -o ${OBJECTDIR}/_ext/592584297/usb.o ../sources/usb.c   2>&1  > ${OBJECTDIR}/_ext/592584297/usb.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/592584297/usb.o.ok ; fi 
 	@touch ${OBJECTDIR}/_ext/592584297/usb.o.d 
 	
 ifneq (,$(findstring MINGW32,$(OS_CURRENT))) 
@@ -230,8 +230,8 @@ ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o: ../nvm_operation_lib.c  nbproject/Ma
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
 	@${RM} ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o.ok ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o.err 
-	@echo ${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o.d -o ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o ../nvm_operation_lib.c  
-	@-${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o.d -o ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o ../nvm_operation_lib.c   2>&1  > ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o.ok ; fi 
+	@echo ${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o.d -o ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o ../nvm_operation_lib.c  
+	@-${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o.d -o ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o ../nvm_operation_lib.c   2>&1  > ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o.ok ; fi 
 	@touch ${OBJECTDIR}/_ext/1472/nvm_operation_lib.o.d 
 	
 ifneq (,$(findstring MINGW32,$(OS_CURRENT))) 
@@ -248,8 +248,8 @@ ${OBJECTDIR}/_ext/592584297/main.o: ../sources/main.c  nbproject/Makefile-${CND_
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/main.o.d 
 	@${RM} ${OBJECTDIR}/_ext/592584297/main.o.ok ${OBJECTDIR}/_ext/592584297/main.o.err 
-	@echo ${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/main.o.d -o ${OBJECTDIR}/_ext/592584297/main.o ../sources/main.c  
-	@-${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/main.o.d -o ${OBJECTDIR}/_ext/592584297/main.o ../sources/main.c   2>&1  > ${OBJECTDIR}/_ext/592584297/main.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/592584297/main.o.ok ; fi 
+	@echo ${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/main.o.d -o ${OBJECTDIR}/_ext/592584297/main.o ../sources/main.c  
+	@-${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/main.o.d -o ${OBJECTDIR}/_ext/592584297/main.o ../sources/main.c   2>&1  > ${OBJECTDIR}/_ext/592584297/main.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/592584297/main.o.ok ; fi 
 	@touch ${OBJECTDIR}/_ext/592584297/main.o.d 
 	
 ifneq (,$(findstring MINGW32,$(OS_CURRENT))) 
@@ -266,8 +266,8 @@ ${OBJECTDIR}/_ext/592584297/flash.o: ../sources/flash.c  nbproject/Makefile-${CN
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/flash.o.d 
 	@${RM} ${OBJECTDIR}/_ext/592584297/flash.o.ok ${OBJECTDIR}/_ext/592584297/flash.o.err 
-	@echo ${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/flash.o.d -o ${OBJECTDIR}/_ext/592584297/flash.o ../sources/flash.c  
-	@-${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/flash.o.d -o ${OBJECTDIR}/_ext/592584297/flash.o ../sources/flash.c   2>&1  > ${OBJECTDIR}/_ext/592584297/flash.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/592584297/flash.o.ok ; fi 
+	@echo ${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/flash.o.d -o ${OBJECTDIR}/_ext/592584297/flash.o ../sources/flash.c  
+	@-${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/flash.o.d -o ${OBJECTDIR}/_ext/592584297/flash.o ../sources/flash.c   2>&1  > ${OBJECTDIR}/_ext/592584297/flash.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/592584297/flash.o.ok ; fi 
 	@touch ${OBJECTDIR}/_ext/592584297/flash.o.d 
 	
 ifneq (,$(findstring MINGW32,$(OS_CURRENT))) 
@@ -284,8 +284,8 @@ ${OBJECTDIR}/_ext/592584297/cdcacm.o: ../sources/cdcacm.c  nbproject/Makefile-${
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/cdcacm.o.d 
 	@${RM} ${OBJECTDIR}/_ext/592584297/cdcacm.o.ok ${OBJECTDIR}/_ext/592584297/cdcacm.o.err 
-	@echo ${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/cdcacm.o.d -o ${OBJECTDIR}/_ext/592584297/cdcacm.o ../sources/cdcacm.c  
-	@-${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/cdcacm.o.d -o ${OBJECTDIR}/_ext/592584297/cdcacm.o ../sources/cdcacm.c   2>&1  > ${OBJECTDIR}/_ext/592584297/cdcacm.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/592584297/cdcacm.o.ok ; fi 
+	@echo ${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/cdcacm.o.d -o ${OBJECTDIR}/_ext/592584297/cdcacm.o ../sources/cdcacm.c  
+	@-${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/cdcacm.o.d -o ${OBJECTDIR}/_ext/592584297/cdcacm.o ../sources/cdcacm.c   2>&1  > ${OBJECTDIR}/_ext/592584297/cdcacm.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/592584297/cdcacm.o.ok ; fi 
 	@touch ${OBJECTDIR}/_ext/592584297/cdcacm.o.d 
 	
 ifneq (,$(findstring MINGW32,$(OS_CURRENT))) 
@@ -302,8 +302,8 @@ ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o: ../sources/pic32bootloaderusb.
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d 
 	@${RM} ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.ok ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.err 
-	@echo ${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d -o ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o ../sources/pic32bootloaderusb.c  
-	@-${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d -o ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o ../sources/pic32bootloaderusb.c   2>&1  > ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.ok ; fi 
+	@echo ${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d -o ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o ../sources/pic32bootloaderusb.c  
+	@-${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d -o ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o ../sources/pic32bootloaderusb.c   2>&1  > ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.ok ; fi 
 	@touch ${OBJECTDIR}/_ext/592584297/pic32bootloaderusb.o.d 
 	
 ifneq (,$(findstring MINGW32,$(OS_CURRENT))) 
@@ -320,8 +320,8 @@ ${OBJECTDIR}/_ext/592584297/util.o: ../sources/util.c  nbproject/Makefile-${CND_
 	@${MKDIR} ${OBJECTDIR}/_ext/592584297 
 	@${RM} ${OBJECTDIR}/_ext/592584297/util.o.d 
 	@${RM} ${OBJECTDIR}/_ext/592584297/util.o.ok ${OBJECTDIR}/_ext/592584297/util.o.err 
-	@echo ${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/util.o.d -o ${OBJECTDIR}/_ext/592584297/util.o ../sources/util.c  
-	@-${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -DPRGSWITCH=1 -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/util.o.d -o ${OBJECTDIR}/_ext/592584297/util.o ../sources/util.c   2>&1  > ${OBJECTDIR}/_ext/592584297/util.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/592584297/util.o.ok ; fi 
+	@echo ${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/util.o.d -o ${OBJECTDIR}/_ext/592584297/util.o ../sources/util.c  
+	@-${MP_CC} $(MP_EXTRA_CC_PRE)  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mno-float -D_BOARD_CUI32_ -I".." -I"../sources" -Os -fomit-frame-pointer -fno-builtin -MMD -MF ${OBJECTDIR}/_ext/592584297/util.o.d -o ${OBJECTDIR}/_ext/592584297/util.o ../sources/util.c   2>&1  > ${OBJECTDIR}/_ext/592584297/util.o.err ; if [ $$? -eq 0 ] ; then touch ${OBJECTDIR}/_ext/592584297/util.o.ok ; fi 
 	@touch ${OBJECTDIR}/_ext/592584297/util.o.d 
 	
 ifneq (,$(findstring MINGW32,$(OS_CURRENT))) 
