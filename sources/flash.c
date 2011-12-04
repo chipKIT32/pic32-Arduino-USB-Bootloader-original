@@ -8,13 +8,19 @@
 // by Rich Testardi; please preserve this reference and share bug
 // fixes with rich@testardi.com.
 //************************************************************************
+//*	Edit history
+//************************************************************************
+//*	Dec  4,	2011	<MLS> Issue #3 Change flash write to always use word write (_USE_WORD_WRITE_)
+//************************************************************************
 
 #include "main.h"
 
 
-#if defined(_BOARD_MIKROE_MULTIMEDIA_) || defined(_BOARD_MIKROE_MIKROMEDIA_)
-	#define _USE_WORD_WRITE_
-#endif
+//#if defined(_BOARD_MIKROE_MULTIMEDIA_) || defined(_BOARD_MIKROE_MIKROMEDIA_)
+//	#define _USE_WORD_WRITE_
+//#endif
+
+#define _USE_WORD_WRITE_
 
 #define	NVMOP_PAGE_ERASE		0x4004		//	Page erase operation
 #define	NVMOP_WORD_PGM			0x4001		// Word program operation
