@@ -729,7 +729,7 @@ void	avrbl_run(void)
 
 		#ifndef PRGSWITCH
 			// if we've been here too long without stk500v2 becoming active...
-			if (gLoops >= AVRBL_LOOPS && !active)
+			if (gLoops >= AVRBL_LOOPS && !gActive)
 			{
 				// launch the application!
 				jump_to_app();
