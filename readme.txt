@@ -1,3 +1,7 @@
+WARNING: This bootloader only works if compiled with the C32 v1.xx version due
+changes in the way that newer version of C32/XC32 handles the linker scripts
+files.
+
 This project builds a simple Stk500v2 bootloader that is compatible with
 avrdude and MPIDE (used on the chipKIT boards) for any PIC32 MX4, 5, 6, or 7
 MCU.  The bootloader lives wholly in bootflash, leaving all primary flash
