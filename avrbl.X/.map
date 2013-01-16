@@ -1,0 +1,870 @@
+Archive member included because of file (symbol)
+
+C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-reset.o)
+                              C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib/crt0.o (_on_reset)
+C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-bootstrap.o)
+                              C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib/crt0.o (_on_bootstrap)
+C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-nmi-handler.o)
+                              C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib/crt0.o (_nmi_handler)
+C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(pcache.o)
+                              build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o (CheKseg0CacheOn)
+C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_disable_interrupts_lib.o)
+                              build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o (INTDisableInterrupts)
+C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_restore_interrupts_lib.o)
+                              build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o (INTRestoreInterrupts)
+C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_mv_int_lib.o)
+                              build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o (INTEnableSystemMultiVectoredInt)
+C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_erase_page_lib.o)
+                              build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/flash.o (NVMErasePage)
+C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_operation_lib.o)
+                              C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_erase_page_lib.o) (_NVMOperation)
+C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_write_word_lib.o)
+                              build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/flash.o (NVMWriteWord)
+C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_interrupts_lib.o)
+                              C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_mv_int_lib.o) (INTEnableInterrupts)
+
+Microchip PIC32 Memory-Usage Report
+
+kseg0 Program-Memory Usage
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+      Total kseg0_program_mem used  :           0           0  
+
+kseg0 Boot-Memory Usage
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+.startup                0x9fc00490          0x1e0         480  C startup code 
+.text                   0x9fc00670         0x1824        6180  Application's executable code 
+.rodata                 0x9fc01e94          0x12c         300  Read-only constant data 
+.sdata                  0x9fc01fc0            0xc          12  Small data-initialization template 
+         Total kseg0_boot_mem used  :      0x1b3c        6972  63.3% of 0x2b00
+
+Exception-Memory Usage 
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+          Total exception_mem used  :           0           0  
+
+kseg1 Boot-Memory Usage
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+.reset                  0xbfc00000           0x10          16  Reset handler 
+         Total kseg1_boot_mem used  :        0x10          16  1.4% of 0x490
+        --------------------------------------------------------------------------
+         Total Program Memory used  :      0x1b4c        6988  57.4% of 0x2f90
+        --------------------------------------------------------------------------
+
+
+kseg1 Data-Memory Usage
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+.sdata                  0xa0000004            0xc          12  Small initialized data 
+.sbss                   0xa0000010           0x7d         125  Small uninitialized data 
+.bss                    0xa0000200         0x1180        4480  Uninitialized data 
+.stack                  0xa0001380          0x400        1024  Minimum space reserved for stack 
+         Total kseg1_data_mem used  :      0x1609        5641  17.2% of 0x7ffc
+        --------------------------------------------------------------------------
+            Total Data Memory used  :      0x1609        5641  17.2% of 0x7ffc
+        --------------------------------------------------------------------------
+
+Discarded input sections
+
+ .data          0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib/crt0.o
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib/crt0.o
+ .reginfo       0x00000000       0x18 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib/crt0.o
+ .pdr           0x00000000       0xa0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib/crt0.o
+ .bev_handler   0x00000000       0x10 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib/crt0.o
+ .gen_handler   0x00000000       0x10 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib/crt0.o
+ .text          0x00000000        0x0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .data          0x00000000        0x0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .bss           0x00000000        0x0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .reginfo       0x00000000       0x18 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .pdr           0x00000000       0xc0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .text.cdcacm_command_ack
+                0x00000000       0x50 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .text          0x00000000        0x0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/flash.o
+ .data          0x00000000        0x0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/flash.o
+ .bss           0x00000000        0x0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/flash.o
+ .reginfo       0x00000000       0x18 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/flash.o
+ .pdr           0x00000000       0x40 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/flash.o
+ .text          0x00000000        0x0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o
+ .data          0x00000000        0x0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o
+ .bss           0x00000000        0x0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o
+ .reginfo       0x00000000       0x18 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o
+ .pdr           0x00000000       0x60 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o
+ .text._general_exception_context
+                0x00000000        0xc build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o
+ .text._bootstrap_exception_handler
+                0x00000000        0xc build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o
+ .text          0x00000000        0x0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .data          0x00000000        0x0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .bss           0x00000000        0x0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .reginfo       0x00000000       0x18 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .pdr           0x00000000      0x100 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .text          0x00000000        0x0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .data          0x00000000        0x0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .bss           0x00000000        0x0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .reginfo       0x00000000       0x18 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .pdr           0x00000000      0x100 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .sbss.cdc_attached
+                0x00000000        0x1 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .sbss.scsi_attached
+                0x00000000        0x1 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .sbss.scsi_attached_count
+                0x00000000        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .sbss.other_attached
+                0x00000000        0x1 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .bss.descriptor
+                0x00000000       0x14 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .bss.configuration
+                0x00000000       0x80 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .text          0x00000000        0x0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/util.o
+ .data          0x00000000        0x0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/util.o
+ .bss           0x00000000        0x0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/util.o
+ .reginfo       0x00000000       0x18 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/util.o
+ .pdr           0x00000000       0x80 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/util.o
+ .text          0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
+ .data          0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
+ .reginfo       0x00000000       0x18 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
+ .pdr           0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
+ .text          0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-reset.o)
+ .data          0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-reset.o)
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-reset.o)
+ .reginfo       0x00000000       0x18 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-reset.o)
+ .pdr           0x00000000       0x20 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-reset.o)
+ .text          0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-bootstrap.o)
+ .data          0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-bootstrap.o)
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-bootstrap.o)
+ .reginfo       0x00000000       0x18 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-bootstrap.o)
+ .pdr           0x00000000       0x20 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-bootstrap.o)
+ .data          0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-nmi-handler.o)
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-nmi-handler.o)
+ .reginfo       0x00000000       0x18 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-nmi-handler.o)
+ .pdr           0x00000000       0x20 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-nmi-handler.o)
+ .text          0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(pcache.o)
+ .data          0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(pcache.o)
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(pcache.o)
+ .reginfo       0x00000000       0x18 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(pcache.o)
+ .pdr           0x00000000       0x40 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(pcache.o)
+ .text.CheKseg0CacheOff
+                0x00000000       0x18 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(pcache.o)
+ .text          0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_disable_interrupts_lib.o)
+ .data          0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_disable_interrupts_lib.o)
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_disable_interrupts_lib.o)
+ .reginfo       0x00000000       0x18 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_disable_interrupts_lib.o)
+ .pdr           0x00000000       0x20 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_disable_interrupts_lib.o)
+ .text          0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_restore_interrupts_lib.o)
+ .data          0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_restore_interrupts_lib.o)
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_restore_interrupts_lib.o)
+ .reginfo       0x00000000       0x18 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_restore_interrupts_lib.o)
+ .pdr           0x00000000       0x20 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_restore_interrupts_lib.o)
+ .text          0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_mv_int_lib.o)
+ .data          0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_mv_int_lib.o)
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_mv_int_lib.o)
+ .reginfo       0x00000000       0x18 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_mv_int_lib.o)
+ .pdr           0x00000000       0x20 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_mv_int_lib.o)
+ .text          0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_erase_page_lib.o)
+ .data          0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_erase_page_lib.o)
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_erase_page_lib.o)
+ .reginfo       0x00000000       0x18 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_erase_page_lib.o)
+ .pdr           0x00000000       0x20 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_erase_page_lib.o)
+ .text          0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_operation_lib.o)
+ .data          0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_operation_lib.o)
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_operation_lib.o)
+ .reginfo       0x00000000       0x18 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_operation_lib.o)
+ .pdr           0x00000000       0x20 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_operation_lib.o)
+ .text          0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_write_word_lib.o)
+ .data          0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_write_word_lib.o)
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_write_word_lib.o)
+ .reginfo       0x00000000       0x18 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_write_word_lib.o)
+ .pdr           0x00000000       0x20 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_write_word_lib.o)
+ .text          0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_interrupts_lib.o)
+ .data          0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_interrupts_lib.o)
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_interrupts_lib.o)
+ .reginfo       0x00000000       0x18 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_interrupts_lib.o)
+ .pdr           0x00000000       0x20 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_interrupts_lib.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+kseg0_program_mem 0x9d000000         0x00000000         xr
+//kseg0_boot_mem 0x9fc00490         0x00000970         xr
+//exception_mem  0x9fc01180         0x00000090
+//kseg0_boot_memB 0x9fc01210         0x00000df0         xr
+kseg0_boot_mem   0x9fc00490         0x00002b00         xr
+exception_mem    0x9fc00000         0x00000000
+kseg1_boot_mem   0xbfc00000         0x00000490
+config3          0xbfc02ff0         0x00000004
+config2          0xbfc02ff4         0x00000004
+config1          0xbfc02ff8         0x00000004
+config0          0xbfc02ffc         0x00000004
+boot_software_key 0xa0000000         0x00000004
+kseg1_data_mem   0xa0000004         0x00007ffc         w !x
+sfrs             0xbf800000         0x00100000
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib/crt0.o
+LOAD build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+LOAD build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/flash.o
+LOAD build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o
+LOAD build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+LOAD build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+LOAD build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/util.o
+                0x00000001                __MPLAB_BUILD = 0x1
+                0x00000400                PROVIDE (_min_stack_size, 0x400)
+                0x00000000                PROVIDE (_min_heap_size, 0x0)
+LOAD C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
+                0x00000001                PROVIDE (_vector_spacing, 0x1)
+                0x9fc01000                //_ebase_address = 0x9fc01000
+                0x00000000                _ebase_address = 0x0
+                0xbfc00000                //_general_exception_context = 0xbfc00000
+                0xbfc00000                //_on_bootstrap = 0xbfc00000
+                0xbfc00000                _RESET_ADDR = 0xbfc00000
+                0xbfc00380                _BEV_EXCPT_ADDR = 0xbfc00380
+                0xbfc00480                _DBG_EXCPT_ADDR = 0xbfc00480
+                0x00000180                _GEN_EXCPT_ADDR = (_ebase_address + 0x180)
+
+.boot_software_key_sec
+ *(.boot_software_key_sec)
+
+.config_BFC02FF0
+ *(.config_BFC02FF0)
+
+.config_BFC02FF4
+                0xbfc02ff4        0x4
+ *(.config_BFC02FF4)
+ .config_BFC02FF4
+                0xbfc02ff4        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o
+
+.config_BFC02FF8
+                0xbfc02ff8        0x4
+ *(.config_BFC02FF8)
+ .config_BFC02FF8
+                0xbfc02ff8        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o
+
+.config_BFC02FFC
+                0xbfc02ffc        0x4
+ *(.config_BFC02FFC)
+ .config_BFC02FFC
+                0xbfc02ffc        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o
+
+.reset          0xbfc00000       0x10
+ *(.reset)
+ .reset         0xbfc00000       0x10 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib/crt0.o
+                0xbfc00000                _reset
+
+.dbg_excpt      0xbfc00480        0x0
+                0xbfc00480                . = (. + DEFINED (_DEBUGGER)?0x8:0x0)
+
+/DISCARD/
+ *(.gen_handler)
+ *(.vector_0)
+ *(.pdr)
+ *(.reginfo)
+ *(.rel.dyn)
+ *(.note.GNU-stack)
+
+.startup        0x9fc00490      0x1e0
+ *(.startup)
+ .startup       0x9fc00490      0x1e0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib/crt0.o
+
+.text           0x9fc00670     0x1824
+                0x9fc00670                _text_begin = .
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x9fc00670       0x10 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib/crt0.o
+                0x9fc00678                __crt0_exit
+ .text.cdcacm_print
+                0x9fc00680      0x1d4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+                0x9fc00680                cdcacm_print
+ .text.cdcacm_control_transfer
+                0x9fc00854       0xb8 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .text.cdcacm_bulk_transfer
+                0x9fc0090c       0xd8 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .text.cdcacm_reset
+                0x9fc009e4       0x74 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .text.cdcacm_register
+                0x9fc00a58       0x80 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+                0x9fc00a58                cdcacm_register
+ .text.flash_erase_pages
+                0x9fc00ad8       0x9c build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/flash.o
+                0x9fc00ad8                flash_erase_pages
+ .text.flash_write_words
+                0x9fc00b74       0xa4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/flash.o
+                0x9fc00b74                flash_write_words
+ .text.main     0x9fc00c18       0xb8 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o
+                0x9fc00c18                main
+ .text.avrbl_state_machine
+                0x9fc00cd0       0xec build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+                0x9fc00cd0                avrbl_state_machine
+ .text.avrbl_receive
+                0x9fc00dbc       0x48 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+                0x9fc00dbc                avrbl_receive
+ .text.jump_to_app
+                0x9fc00e04       0x74 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+                0x9fc00e04                jump_to_app
+ .text.avrbl_print
+                0x9fc00e78       0x24 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+                0x9fc00e78                avrbl_print
+ .text.avrbl_message
+                0x9fc00e9c      0x3f8 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+                0x9fc00e9c                avrbl_message
+ .text.avrbl_run
+                0x9fc01294       0xf8 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+                0x9fc01294                avrbl_run
+ .text.avrbl_reset_cbfn
+                0x9fc0138c        0x8 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .text.avrbl_initialize
+                0x9fc01394        0xc build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+                0x9fc01394                avrbl_initialize
+ .text.usb_device_enqueue
+                0x9fc013a0      0x110 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+                0x9fc013a0                usb_device_enqueue
+ .text.usb_isr  0x9fc014b0      0x654 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+                0x9fc014b0                usb_isr
+ .text.usb_register
+                0x9fc01b04       0x10 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+                0x9fc01b04                usb_register
+ .text.usb_device_descriptor
+                0x9fc01b14        0xc build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+                0x9fc01b14                usb_device_descriptor
+ .text.usb_configuration_descriptor
+                0x9fc01b20        0xc build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+                0x9fc01b20                usb_configuration_descriptor
+ .text.usb_string_descriptor
+                0x9fc01b2c        0xc build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+                0x9fc01b2c                usb_string_descriptor
+ .text.usb_uninitialize
+                0x9fc01b38       0x2c build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+                0x9fc01b38                usb_uninitialize
+ .text.usb_initialize
+                0x9fc01b64       0x8c build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+                0x9fc01b64                usb_initialize
+ .text.splx     0x9fc01bf0        0x8 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/util.o
+                0x9fc01bf0                splx
+ .text.memcpy   0x9fc01bf8       0x30 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/util.o
+                0x9fc01bf8                memcpy
+ .text.memset   0x9fc01c28       0x2c build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/util.o
+                0x9fc01c28                memset
+ .text.strcpy   0x9fc01c54       0x24 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/util.o
+                0x9fc01c54                strcpy
+ .text._on_reset
+                0x9fc01c78        0x8 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-reset.o)
+                0x9fc01c78                _on_reset
+ .text._on_bootstrap
+                0x9fc01c80        0x8 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-bootstrap.o)
+                0x9fc01c80                _on_bootstrap
+ .text          0x9fc01c88       0x18 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-nmi-handler.o)
+                0x9fc01c88                _nmi_handler
+ .text.CheKseg0CacheOn
+                0x9fc01ca0       0x18 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(pcache.o)
+                0x9fc01ca0                CheKseg0CacheOn
+ .text.INTDisableInterrupts
+                0x9fc01cb8        0x8 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_disable_interrupts_lib.o)
+                0x9fc01cb8                INTDisableInterrupts
+ .text.INTRestoreInterrupts
+                0x9fc01cc0       0x1c C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_restore_interrupts_lib.o)
+                0x9fc01cc0                INTRestoreInterrupts
+ .text.INTEnableSystemMultiVectoredInt
+                0x9fc01cdc       0x34 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_mv_int_lib.o)
+                0x9fc01cdc                INTEnableSystemMultiVectoredInt
+ .text.NVMErasePage
+                0x9fc01d10       0x34 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_erase_page_lib.o)
+                0x9fc01d10                NVMErasePage
+ .text._NVMOperation
+                0x9fc01d44      0x10c C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_operation_lib.o)
+                0x9fc01d44                _NVMOperation
+ .text.NVMWriteWord
+                0x9fc01e50       0x3c C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_write_word_lib.o)
+                0x9fc01e50                NVMWriteWord
+ .text.INTEnableInterrupts
+                0x9fc01e8c        0x8 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_interrupts_lib.o)
+                0x9fc01e8c                INTEnableInterrupts
+ *(.text.*personality*)
+ *(.gnu.warning)
+ *(.mips16.fn.*)
+ *(.mips16.call.*)
+                0x9fc01e94                _text_end = .
+
+.rodata         0x9fc01e94      0x12c
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.cdcacm_string_descriptor
+                0x9fc01e94       0x38 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .rodata.cdcacm_configuration_descriptor
+                0x9fc01ecc       0x44 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .rodata.cdcacm_device_descriptor
+                0x9fc01f10       0x14 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .rodata        0x9fc01f24       0x90 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .rodata.str1.4
+                0x9fc01fb4        0xc build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ *(.rodata1)
+                0x9fc01fc0                . = ALIGN (0x4)
+
+.sdata2         0x9fc01fc0        0x0
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0x9fc01fc0                . = ALIGN (0x4)
+
+.sbss2          0x9fc01fc0        0x0
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+                0x9fc01fc0                . = ALIGN (0x4)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.dbg_data       0xa0000004        0x0
+                0xa0000004                . = (. + DEFINED (_DEBUGGER)?0x200:0x0)
+
+.data           0xa0000004        0x0 load address 0x9fc01fc0
+                0xa0000004                _data_begin = .
+ *(.data .data.* .gnu.linkonce.d.*)
+ *(.gnu.linkonce.d.*personality*)
+ *(.data1)
+                0x9fc01fc0                _data_image_begin = LOADADDR (.data)
+
+.eh_frame
+ *(.eh_frame)
+                0xa0000004                . = .
+                0xa0008000                _gp = (ALIGN (0x10) + 0x7ff0)
+
+.got
+ *(.got.plt)
+ *(.got)
+
+.sdata          0xa0000004        0xc load address 0x9fc01fc0
+                0xa0000004                _sdata_begin = .
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata.line_coding
+                0xa0000004        0x8 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .sdata.state   0xa000000c        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+                0xa0000010                _sdata_end = .
+
+.lit8
+ *(.lit8)
+
+.lit4
+ *(.lit4)
+                0xa0000010                . = ALIGN (0x4)
+                0xa0000010                _data_end = .
+                0xa0000010                _bss_begin = .
+
+.sbss           0xa0000010       0x7d load address 0x9fc01fcc
+                0xa0000010                _sbss_begin = .
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss.cdcacm_active
+                0xa0000010        0x1 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+                0xa0000010                cdcacm_active
+ *fill*         0xa0000011        0x3 00
+ .sbss.reset_cbfn
+                0xa0000014        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .sbss.rx_in    0xa0000018        0x1 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .sbss.rx_out   0xa0000019        0x1 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .sbss.discard  0xa000001a        0x1 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .sbss.waiting  0xa000001b        0x1 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .sbss.cpu_frequency
+                0xa000001c        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o
+                0xa000001c                cpu_frequency
+ .sbss.oscillator_frequency
+                0xa0000020        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o
+                0xa0000020                oscillator_frequency
+ .sbss.bus_frequency
+                0xa0000024        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o
+                0xa0000024                bus_frequency
+ .sbss.load_address.0
+                0xa0000028        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .sbss.gActive  0xa000002c        0x1 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ *fill*         0xa000002d        0x3 00
+ .sbss.gLoaded  0xa0000030        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .sbss.gLoops   0xa0000034        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .sbss.gErased  0xa0000038        0x1 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .sbss.seq      0xa0000039        0x1 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ *fill*         0xa000003a        0x2 00
+ .sbss.size     0xa000003c        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .sbss.csum     0xa0000040        0x1 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .sbss.ready    0xa0000041        0x1 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ *fill*         0xa0000042        0x2 00
+ .sbss.requesti
+                0xa0000044        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .sbss.replyi   0xa0000048        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .sbss.delay    0xa000004c        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .sbss.cdcacm_attached
+                0xa0000050        0x1 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+                0xa0000050                cdcacm_attached
+ *fill*         0xa0000051        0x3 00
+ .sbss.cdcacm_attached_count
+                0xa0000054        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+                0xa0000054                cdcacm_attached_count
+ .sbss.bulk_in_ep
+                0xa0000058        0x1 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+                0xa0000058                bulk_in_ep
+ .sbss.bulk_out_ep
+                0xa0000059        0x1 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+                0xa0000059                bulk_out_ep
+ .sbss.int_ep   0xa000005a        0x1 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+                0xa000005a                int_ep
+ *fill*         0xa000005b        0x1 00
+ .sbss.bdts     0xa000005c        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .sbss.device_descriptor
+                0xa0000060        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .sbss.device_descriptor_length
+                0xa0000064        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .sbss.configuration_descriptor
+                0xa0000068        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .sbss.configuration_descriptor_length
+                0xa000006c        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .sbss.string_descriptor
+                0xa0000070        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .sbss.string_descriptor_length
+                0xa0000074        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .sbss.reset_cbfn
+                0xa0000078        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .sbss.control_transfer_cbfn
+                0xa000007c        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .sbss.bulk_transfer_cbfn
+                0xa0000080        0x4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .sbss.setup_buffer
+                0xa0000084        0x8 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .sbss.next_address
+                0xa000008c        0x1 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ *(.scommon)
+                0xa000008d                _sbss_end = .
+
+.bss            0xa0000200     0x1180 load address 0x9fc01fcc
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss.tx        0xa0000200       0x40 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .bss.rx        0xa0000240      0x3f0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .bss.rx_length
+                0xa0000630       0x40 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .bss.parameters.1
+                0xa0000670      0x100 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .bss.request   0xa0000770      0x400 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .bss.reply     0xa0000b70      0x400 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ *fill*         0xa0000f70       0x90 00
+ .bss.bdt_ram.0
+                0xa0001000      0x200 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .bss.endpoints
+                0xa0001200      0x180 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+                0xa0001200                endpoints
+ *(COMMON)
+                0xa0001380                . = ALIGN (0x4)
+                0xa0001380                . = ALIGN (0x4)
+                0xa0001380                _end = .
+                0xa0001380                _bss_end = .
+
+.heap           0xa0001380        0x0 load address 0x9fc01fcc
+                0xa0001380                _heap = .
+                0xa0001380                . = (. + _min_heap_size)
+                0xa0001380                . = ALIGN (0x8)
+
+.stack          0xa0001380      0x400 load address 0x9fc01fcc
+                0xa0001380                _splim = .
+                0xa0001380                _SPLIM = .
+                0xa0001f80                . = (. + _min_stack_size)
+ *fill*         0xa0001380      0x400 00
+                0xa0001780                . = ALIGN (0x8)
+
+.ramfunc        0xa0001800        0x0 load address 0x9fc01fcc
+                0xa0001800                _ramfunc_begin = .
+ *(.ramfunc .ramfunc.*)
+                0xa0001800                . = ALIGN (0x4)
+                0xa0001800                _ramfunc_end = .
+                0x9fc01fcc                _ramfunc_image_begin = LOADADDR (.ramfunc)
+                0x00000000                _ramfunc_length = SIZEOF (.ramfunc)
+                0x000017fc                _bmxdkpba_address = (_ramfunc_begin - 0xa0000004)
+                0x00007ffc                _bmxdudba_address = 0x7ffc
+                0x00007ffc                _bmxdupba_address = 0x7ffc
+                0xa0008000                _stack = (_ramfunc_length > 0x0)?(_ramfunc_begin - 0x8):0xa0008000
+                0x00000001                ASSERT (((_min_stack_size + _min_heap_size) <= (_stack - _heap)), Not enough space to allocate both stack and heap.  Reduce heap and/or stack size.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.mdebug.abi32   0x00000000        0x0
+ .mdebug.abi32  0x00000000        0x0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .mdebug.abi32  0x00000000        0x0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/flash.o
+ .mdebug.abi32  0x00000000        0x0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o
+ .mdebug.abi32  0x00000000        0x0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .mdebug.abi32  0x00000000        0x0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .mdebug.abi32  0x00000000        0x0 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/util.o
+ .mdebug.abi32  0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-reset.o)
+ .mdebug.abi32  0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-bootstrap.o)
+ .mdebug.abi32  0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(pcache.o)
+ .mdebug.abi32  0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_disable_interrupts_lib.o)
+ .mdebug.abi32  0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_restore_interrupts_lib.o)
+ .mdebug.abi32  0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_mv_int_lib.o)
+ .mdebug.abi32  0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_erase_page_lib.o)
+ .mdebug.abi32  0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_operation_lib.o)
+ .mdebug.abi32  0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_write_word_lib.o)
+ .mdebug.abi32  0x00000000        0x0 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_interrupts_lib.o)
+
+.comment        0x00000000      0x4d0
+ *(.comment)
+ .comment       0x00000000       0x4d build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .comment       0x0000004d       0x4d build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/flash.o
+ .comment       0x0000009a       0x4d build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o
+ .comment       0x000000e7       0x4d build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .comment       0x00000134       0x4d build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .comment       0x00000181       0x4d build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/util.o
+ .comment       0x000001ce       0x4d C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-reset.o)
+ .comment       0x0000021b       0x4d C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-bootstrap.o)
+ .comment       0x00000268       0x4d C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(pcache.o)
+ .comment       0x000002b5       0x4d C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_disable_interrupts_lib.o)
+ .comment       0x00000302       0x4d C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_restore_interrupts_lib.o)
+ .comment       0x0000034f       0x4d C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_mv_int_lib.o)
+ .comment       0x0000039c       0x4d C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_erase_page_lib.o)
+ .comment       0x000003e9       0x4d C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_operation_lib.o)
+ .comment       0x00000436       0x4d C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_write_word_lib.o)
+ .comment       0x00000483       0x4d C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_interrupts_lib.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x350
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x50 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .debug_aranges
+                0x00000050       0x30 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/flash.o
+ .debug_aranges
+                0x00000080       0x38 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o
+ .debug_aranges
+                0x000000b8       0x60 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .debug_aranges
+                0x00000118       0x60 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .debug_aranges
+                0x00000178       0x40 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/util.o
+ .debug_aranges
+                0x000001b8       0x28 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-reset.o)
+ .debug_aranges
+                0x000001e0       0x28 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-bootstrap.o)
+ .debug_aranges
+                0x00000208       0x30 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(pcache.o)
+ .debug_aranges
+                0x00000238       0x28 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_disable_interrupts_lib.o)
+ .debug_aranges
+                0x00000260       0x28 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_restore_interrupts_lib.o)
+ .debug_aranges
+                0x00000288       0x28 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_mv_int_lib.o)
+ .debug_aranges
+                0x000002b0       0x28 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_erase_page_lib.o)
+ .debug_aranges
+                0x000002d8       0x28 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_operation_lib.o)
+ .debug_aranges
+                0x00000300       0x28 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_write_word_lib.o)
+ .debug_aranges
+                0x00000328       0x28 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_interrupts_lib.o)
+
+.debug_pubnames
+                0x00000000      0x519
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x60 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .debug_pubnames
+                0x00000060       0x3e build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/flash.o
+ .debug_pubnames
+                0x0000009e       0x98 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o
+ .debug_pubnames
+                0x00000136       0x91 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .debug_pubnames
+                0x000001c7      0x177 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .debug_pubnames
+                0x0000033e       0x3c build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/util.o
+ .debug_pubnames
+                0x0000037a       0x20 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-reset.o)
+ .debug_pubnames
+                0x0000039a       0x24 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-bootstrap.o)
+ .debug_pubnames
+                0x000003be       0x3b C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(pcache.o)
+ .debug_pubnames
+                0x000003f9       0x2b C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_disable_interrupts_lib.o)
+ .debug_pubnames
+                0x00000424       0x2b C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_restore_interrupts_lib.o)
+ .debug_pubnames
+                0x0000044f       0x36 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_mv_int_lib.o)
+ .debug_pubnames
+                0x00000485       0x23 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_erase_page_lib.o)
+ .debug_pubnames
+                0x000004a8       0x24 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_operation_lib.o)
+ .debug_pubnames
+                0x000004cc       0x23 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_write_word_lib.o)
+ .debug_pubnames
+                0x000004ef       0x2a C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_interrupts_lib.o)
+
+.debug_info     0x00000000     0x2dfa
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000      0x7a5 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .debug_info    0x000007a5      0x568 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/flash.o
+ .debug_info    0x00000d0d      0x5ab build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o
+ .debug_info    0x000012b8      0x7a7 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .debug_info    0x00001a5f      0xc4d build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .debug_info    0x000026ac      0x55a build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/util.o
+ .debug_info    0x00002c06       0x31 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-reset.o)
+ .debug_info    0x00002c37       0x31 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-bootstrap.o)
+ .debug_info    0x00002c68       0x42 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(pcache.o)
+ .debug_info    0x00002caa       0x30 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_disable_interrupts_lib.o)
+ .debug_info    0x00002cda       0x30 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_restore_interrupts_lib.o)
+ .debug_info    0x00002d0a       0x30 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_mv_int_lib.o)
+ .debug_info    0x00002d3a       0x30 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_erase_page_lib.o)
+ .debug_info    0x00002d6a       0x30 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_operation_lib.o)
+ .debug_info    0x00002d9a       0x30 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_write_word_lib.o)
+ .debug_info    0x00002dca       0x30 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_interrupts_lib.o)
+
+.debug_abbrev   0x00000000      0xd40
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x21a build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .debug_abbrev  0x0000021a      0x18a build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/flash.o
+ .debug_abbrev  0x000003a4      0x20e build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o
+ .debug_abbrev  0x000005b2      0x1e9 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .debug_abbrev  0x0000079b      0x2ca build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .debug_abbrev  0x00000a65      0x179 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/util.o
+ .debug_abbrev  0x00000bde       0x25 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-reset.o)
+ .debug_abbrev  0x00000c03       0x25 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-bootstrap.o)
+ .debug_abbrev  0x00000c28       0x23 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(pcache.o)
+ .debug_abbrev  0x00000c4b       0x23 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_disable_interrupts_lib.o)
+ .debug_abbrev  0x00000c6e       0x23 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_restore_interrupts_lib.o)
+ .debug_abbrev  0x00000c91       0x23 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_mv_int_lib.o)
+ .debug_abbrev  0x00000cb4       0x23 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_erase_page_lib.o)
+ .debug_abbrev  0x00000cd7       0x23 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_operation_lib.o)
+ .debug_abbrev  0x00000cfa       0x23 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_write_word_lib.o)
+ .debug_abbrev  0x00000d1d       0x23 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_interrupts_lib.o)
+
+.debug_line     0x00000000     0x17d0
+ *(.debug_line)
+ .debug_line    0x00000000      0x325 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .debug_line    0x00000325      0x21d build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/flash.o
+ .debug_line    0x00000542      0x22b build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o
+ .debug_line    0x0000076d      0x372 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .debug_line    0x00000adf      0x445 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .debug_line    0x00000f24      0x216 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/util.o
+ .debug_line    0x0000113a       0xa9 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-reset.o)
+ .debug_line    0x000011e3       0xad C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-bootstrap.o)
+ .debug_line    0x00001290       0x9d C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(pcache.o)
+ .debug_line    0x0000132d       0xae C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_disable_interrupts_lib.o)
+ .debug_line    0x000013db       0xae C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_restore_interrupts_lib.o)
+ .debug_line    0x00001489       0xa9 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_mv_int_lib.o)
+ .debug_line    0x00001532       0xa6 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_erase_page_lib.o)
+ .debug_line    0x000015d8       0xa5 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_operation_lib.o)
+ .debug_line    0x0000167d       0xa6 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_write_word_lib.o)
+ .debug_line    0x00001723       0xad C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_interrupts_lib.o)
+
+.debug_frame    0x00000000      0x49c
+ *(.debug_frame)
+ .debug_frame   0x00000000       0xc4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+ .debug_frame   0x000000c4       0x5c build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/flash.o
+ .debug_frame   0x00000120       0x50 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o
+ .debug_frame   0x00000170       0xc4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+ .debug_frame   0x00000234       0xa4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+ .debug_frame   0x000002d8       0x50 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/util.o
+ .debug_frame   0x00000328       0x20 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-reset.o)
+ .debug_frame   0x00000348       0x20 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-bootstrap.o)
+ .debug_frame   0x00000368       0x30 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(pcache.o)
+ .debug_frame   0x00000398       0x20 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_disable_interrupts_lib.o)
+ .debug_frame   0x000003b8       0x20 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_restore_interrupts_lib.o)
+ .debug_frame   0x000003d8       0x28 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_mv_int_lib.o)
+ .debug_frame   0x00000400       0x28 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_erase_page_lib.o)
+ .debug_frame   0x00000428       0x2c C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_operation_lib.o)
+ .debug_frame   0x00000454       0x28 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_write_word_lib.o)
+ .debug_frame   0x0000047c       0x20 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_interrupts_lib.o)
+
+.debug_str      0x00000000     0x10d6
+ *(.debug_str)
+ .debug_str     0x00000000      0x43d build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/cdcacm.o
+                                0x4ba (size before relaxing)
+ .debug_str     0x0000043d       0xc4 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/flash.o
+                                0x3d8 (size before relaxing)
+ .debug_str     0x00000501       0xf1 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/main.o
+                                0x411 (size before relaxing)
+ .debug_str     0x000005f2      0x175 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/pic32bootloaderusb.o
+                                0x4d9 (size before relaxing)
+ .debug_str     0x00000767      0x325 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
+                                0x750 (size before relaxing)
+ .debug_str     0x00000a8c       0x55 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/util.o
+                                0x374 (size before relaxing)
+ .debug_str     0x00000ae1       0x83 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-reset.o)
+                                 0xca (size before relaxing)
+ .debug_str     0x00000b64       0x8b C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-bootstrap.o)
+                                 0xd2 (size before relaxing)
+ .debug_str     0x00000bef       0x9e C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(pcache.o)
+                                 0xe5 (size before relaxing)
+ .debug_str     0x00000c8d       0xa3 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_disable_interrupts_lib.o)
+                                 0xea (size before relaxing)
+ .debug_str     0x00000d30       0xa3 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_restore_interrupts_lib.o)
+                                 0xea (size before relaxing)
+ .debug_str     0x00000dd3       0xa9 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_mv_int_lib.o)
+                                 0xf0 (size before relaxing)
+ .debug_str     0x00000e7c       0x93 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_erase_page_lib.o)
+                                 0xda (size before relaxing)
+ .debug_str     0x00000f0f       0x93 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_operation_lib.o)
+                                 0xda (size before relaxing)
+ .debug_str     0x00000fa2       0x93 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(nvm_write_word_lib.o)
+                                 0xda (size before relaxing)
+ .debug_str     0x00001035       0xa1 C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a(int_enable_interrupts_lib.o)
+                                 0xe8 (size before relaxing)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo  0x00000000     0x125e
+ *(.debug_macinfo)
+ .debug_macinfo
+                0x00000000      0x92f C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-reset.o)
+ .debug_macinfo
+                0x0000092f      0x92f C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a(default-on-bootstrap.o)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+                0x00000000                _min_heap_size = 0x0
+                0x00000c00                _min_stack_size = 0xc00
+LOAD C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4\libgcc.a
+START GROUP
+LOAD C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libdebug.a
+LOAD C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libc.a
+LOAD C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libm.a
+LOAD C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libe.a
+LOAD C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libdsp.a
+LOAD C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral.a
+LOAD C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4/../../../../pic32mx/lib\libmchp_peripheral_32MX460F512L.a
+END GROUP
+LOAD C:/Program Files (x86)/Microchip/mplabc32/v1.12/bin/../lib/gcc/pic32mx/3.4.4\libgcc.a
+OUTPUT(dist/MirkoElektronika_MultiMedia_Board/production/avrbl.X.production.elf elf32-tradlittlemips)
+
+.debug_ranges   0x00000000       0x18
+ .debug_ranges  0x00000000       0x18 build/MirkoElektronika_MultiMedia_Board/production/_ext/592584297/usb.o
